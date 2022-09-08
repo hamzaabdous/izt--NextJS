@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.header-nav .nav-link {
+  margin-left: 40px;
+  color: #f2ba01;
+}
+
+.header-nav .nav-link .active span {
+  display: block;
+}
+.header-nav .active {
+  color: white !important ;
+}
+
+.header-nav .navbar {
+  background-color: #b5b5b547 !important; /*whichever you want*/
+  width: fit-content;
+}
+.nav-cover {
+  background-image: linear-gradient(0deg, rgb(30 30 30 / 70%), #000000),
+    url('https://img.freepik.com/free-photo/handsome-bearded-smiling-top-manager-black-suit-working-his-laptop-backseat-car_496169-590.jpg?w=1380&t=st=1660231813~exp=1660232413~hmac=dad8d7f94d39999a5ed64bb6a07f736e6c73854afee3b7e6d9484307e71a356c');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-cover-service {
+  background-image: linear-gradient(0deg, rgb(30 30 30 / 30%), #000000),
+    url('../public/slide2.png');
+  width: 100%;
+  height: 105%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.header-nav .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  cursor: pointer;
+}
+
+.slogan h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.slogan h2 {
+  font-size: 5rem;
+  color: white;
+}
+
+.reservation .row {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #282727ba;
+  padding: 6px 6px;
+ margin-right: 0px;
+}
+.reservation label {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+select ::before {
+  content: 'A';
+  position: absolute;
+}
+
+.fancy-underline {
+  background-image: linear-gradient(120deg, #f2ba01, #f2ba01 100%);
+  /* background-color: #9C8A68; */
+  background-repeat: no-repeat;
+  background-size: 100px 0.55em;
+  background-position: 0% 100%;
+  transition: background-size 0.25s ease-in;
+  padding-bottom: 7px;
+}
+
+.infos .container-fluid {
+  background-color: #262221;
+}
+.infos .title {
+  font-size: 3.8rem;
+  line-height: 1;
+}
+.parentView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  justify-content: space-between;
+  background: #262221;
+}
+
+.trapezoid {
+  background: #5a5a5a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
+}
+.trapezoid-service {
+  background: #262221;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
+}
+.trapezoid-service-ccc{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
+}
+.welcomeText {
+  color: red;
+  display: flex;
+}
+
+.staff .izt-values ul {
+  list-style: none;
+}
+.staff .izt-values ul li {
+  color: white;
+}
+.staff .izt-values ul li::before {
+  content: '\2022';
+  color: #f2ba01;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  font-size: 26px;
+}
+
+.testimonies .container-fluid {
+  background-color: #262221;
+}
+
+.characteristic .bg-container {
+  background-image: linear-gradient(0deg, rgb(30 30 30 / 50%), #000000),
+    url('https://img.freepik.com/free-photo/handsome-bearded-smiling-top-manager-black-suit-working-his-laptop-backseat-car_496169-590.jpg?w=1380&t=st=1660231813~exp=1660232413~hmac=dad8d7f94d39999a5ed64bb6a07f736e6c73854afee3b7e6d9484307e71a356c');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.characteristic .parentView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  justify-content: space-between;
+  background: #262221;
+}
+
+.characteristic .trapezoid {
+  background: #5a5a5a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 97%);
+}
+
+footer {
+  background: #262221;
+}
+
+footer {
+  background: #262221;
+  color: white;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.social-footer2 {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+ul.social-footer2 li {
+  padding-bottom: 25px;
+}
+
+ul.social-footer2 li a:hover {
+  background-color: #ff8d1e;
+}
+
+.side-bar .position-absolute {
+  z-index: 100;
+  color: white;
+}
+
+
+ .imgSlideContiner{
+  left: 45%;
+  position:relative !important;
+  margin-top: 50px !important;
+}
+.imgSlideContiner:before{
+  content:'';
+  position: absolute !important;
+  left: 9%;
+  top: -4%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(255, 215, 96);
+  z-index: 1;
+} 
+.containercharacteristic{
+  position:relative !important;
+
+}
+.containercharacteristic:before{
+  content:'';
+  position: absolute !important;
+  top: -6%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(255, 215, 96);
+  z-index: 1;
+
+}
+
