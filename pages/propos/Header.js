@@ -66,10 +66,13 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-uppercase" href="#">
+              <Link href="/contact/contact">
+
+                <a className="nav-link text-uppercase " href="#">
                   {" "}
                   <span className="d-none">&gt;</span>Contact
                 </a>
+                </Link>
               </li>
             </ul>
           </div>
