@@ -13,10 +13,14 @@
 .formContainer{
     position: absolute !important;
     background-color: white;
-    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     width: 80%;
     padding: 30px;
+    margin-top: 130px;
     border-radius: 16px;
     top: 80px;
     z-index: 1;
+    margin-bottom: 10px;
 }
