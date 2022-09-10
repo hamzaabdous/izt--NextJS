@@ -89,14 +89,14 @@ export default function Header() {
           <br />
           <br /> et de limousines.
         </h1>
-        <ul className="position-relative text-lg font-normal lowercase p-2 test">
+        <ul className="position-relative text-center text-lg font-normal lowercase p-2 test">
           <li className="hamza p-2">
             <span className="point"></span> DES CHAUFFEURS PROFESSIONNELS HAUTEMENT FORMÉS
           </li>
           <li className="hamza ">
             <span className="point"></span> POURSUITE DE L'AMÉLIORATION CONTINUE
-          </li>
-          <br/>
+          </li><br/>
+          
           <li className="hamza">
             <span className="point"></span> LA SÉCURITÉ COMME NOTRE PRIORITÉ LA PLUS ÉLEVÉE
           </li>         

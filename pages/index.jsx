@@ -12,7 +12,7 @@ import inst from "../public/insta.png";
 import f from "../public/f.png";
 import reactslick from "./reactslick.js";
 import Header from "./Components/Header";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase ,FaUserAlt ,FaRoad,FaCity} from "react-icons/fa";
 import Slides from "./Components/Slider";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "./Components/TestemonySlides";
@@ -24,14 +24,16 @@ export default function Home() {
   };
   return (
     <>
+    <div id="reservation">
       <Header></Header>
+    </div>
       <div className="infos">
         <div className="container-fluid position-relative p-5">
           <div className="row">
             <div className="col-md-4">
               <div className="fancy-underline rounded"></div>
               <h1 className=" text-white text-3xl  font-light">
-                Faites confiance <br /> <a className="text-yellow-500">à nos</a>
+                Faites confiance <br /> <a className="text-yellow-500 btnReservation">à nos</a>
               </h1>
               <h5 className="text-white text-justify font-light mt-4 mb-8">
                 Avec plus que 30 véhicules différents, nous vous garantissonsle
@@ -65,10 +67,10 @@ export default function Home() {
                       <h1 className="text-white text-3xl">+2160</h1>
                     </div>
                     <div className="col-6">
-                      <FaBriefcase
+                      <FaUserAlt
                         className="text-yellow-500"
                         size={40}
-                      ></FaBriefcase>
+                      ></FaUserAlt>
                     </div>
                   </div>
                   <h4 className=" text-white text-uppercase text-lg font-extralight">
@@ -82,10 +84,10 @@ export default function Home() {
                       <h1 className="text-white text-3xl">+19</h1>
                     </div>
                     <div className="col-6">
-                      <FaBriefcase
+                      <FaCity
                         className="text-yellow-500"
                         size={40}
-                      ></FaBriefcase>
+                      ></FaCity>
                     </div>
                   </div>
                   <h4 className=" text-white text-uppercase text-lg font-extralight">
@@ -98,10 +100,10 @@ export default function Home() {
                       <h1 className="text-white text-3xl">+3460</h1>
                     </div>
                     <div className="col-6">
-                      <FaBriefcase
+                      <FaRoad
                         className="text-yellow-500"
                         size={40}
-                      ></FaBriefcase>
+                      ></FaRoad>
                     </div>
                   </div>
                   <h4 className=" text-white text-uppercase text-lg font-extralight">
@@ -112,9 +114,9 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center">
-            <button className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
+            <a href="#reservation" className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
               Reserver
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -141,9 +143,9 @@ export default function Home() {
                     <li>Véhicules propres et bien entretenus</li>
                     <li>Service client de premier tarif</li>
                   </ul>
-                  <button className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
+                  <a href="#reservation" className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow btnReservation">
                     Reserver
-                  </button>
+                  </a>
                 </div>
                 <div className="col-md-8 p-9 ">
                   <Slides></Slides>
@@ -169,6 +171,11 @@ export default function Home() {
           </div>
           <div>
             <TestemonySlides />
+          </div>
+          <div className="text-center pt-10">
+            <a href="#reservation" className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
+              Reserver
+            </a>
           </div>
         </div>
       </div>
@@ -256,6 +263,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
         </div>
       </div>
       <Footer></Footer>

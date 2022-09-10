@@ -4,11 +4,14 @@ import Slides from "../Components/Slider";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "../Components/TestemonySlides";
 import Footer from "../Components/Footers";
+import { useRouter } from 'next/router'
 
 export default function Service() {
-  const funcClick = () => {
-    alert("ALERT!!");
-  };
+  const router = useRouter()
+
+  const funcClick = (e) => {
+    e.preventDefault()
+    router.push('/')  };
   return (
     <>
       <Header></Header>
@@ -33,7 +36,7 @@ export default function Service() {
                     <li>SERVICE CLIENT DE PREMIER TARIF</li>
                    
                   </ul>
-                  <button className="hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-96">
+                  <button onClick={funcClick}  className="hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-96">
                     Reserver
                   </button>
                 </div>

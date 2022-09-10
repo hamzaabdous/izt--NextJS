@@ -14,7 +14,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.btnReservation{
+  text-decoration: none;
 
+}
 * {
   box-sizing: border-box;
 }

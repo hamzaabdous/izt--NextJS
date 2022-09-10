@@ -60,6 +60,7 @@ const TestemonySlides = (props) => {
                     </div>
                 ))}
             </Slider>
+            
         </div>
     );
 }
