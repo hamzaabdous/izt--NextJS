@@ -172,7 +172,7 @@ export default function Home() {
           <div>
             <TestemonySlides />
           </div>
-          <div className="text-center pt-10">
+          <div className="text-center">
             <a href="#reservation" className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
               Reserver
             </a>
