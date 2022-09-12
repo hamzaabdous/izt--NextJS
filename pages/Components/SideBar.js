@@ -1,6 +1,6 @@
 
 import { Container } from "react-bootstrap";
-import { FaFacebook, FaInstagram,FaTwitter,FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaInstagram,FaTwitter,FaLinkedin } from 'react-icons/fa';
 
 
 function SideBar() {
@@ -14,10 +14,9 @@ function SideBar() {
                     }}>Follow us on<span></span></h6>
 
                     <ul className="social-footer2">
-                        <li className=""><a title="tiktok" target="_blank" href="https://www.tiktok.com/">  <FaTiktok style={{ fontSize: '20px', color: '#fff' }} /></a></li>
-                        <li className=""><a href="https://www.facebook.com/" target="_blank" title="Facebook"> <FaFacebook style={{ fontSize: '20px', color: '#fff' }} /></a></li>
-                        <li className=""><a href="https://twitter.com" target="_blank" title="Twitter"><FaTwitter style={{ fontSize: '20px', color: '#fff' }} /></a></li>
-                        <li className=""><a title="instagram" target="_blank" href="https://www.instagram.com/"><FaInstagram style={{ fontSize: '20px', color: '#fff' }} /></a></li>
+                        <li className=""><a title="linkedin" target="_blank" href="https://www.linkedin.com/company/87206089">  <FaLinkedin style={{ fontSize: '20px', color: '#fff' }} /></a></li>
+                        <li className=""><a href="https://www.facebook.com/IZT.tours/" target="_blank" title="Facebook"> <FaFacebook style={{ fontSize: '20px', color: '#fff' }} /></a></li>
+                        <li className=""><a title="instagram" target="_blank" href="https://www.instagram.com/interville.zeroual/?igshid=YmMyMTA2M2Y%3D"><FaInstagram style={{ fontSize: '20px', color: '#fff' }} /></a></li>
                     </ul>
                 </div>
             </div >

@@ -3,8 +3,9 @@ import bg from "../../public/IZT.png";
 import SideBar from "../Components/SideBar";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Input, useInput, Grid ,Checkbox} from "@nextui-org/react";
+import { Input, useInput, Grid, Checkbox } from "@nextui-org/react";
 import React from "react";
+import { FiUser, FiPhone ,FiMail } from "react-icons/fi";
 
 export default function Header() {
   const router = useRouter();
@@ -110,18 +111,9 @@ export default function Header() {
                 color="warning"
                 helperColor={helper.color}
                 helperText={helper.text}
-                type="email"
                 label="Nom"
-                placeholder="With regex validation"
-                contentLeft={
-                  <Image
-                    src={bg}
-                    className=""
-                    width={200}
-                    height={200}
-                    alt="img"
-                  />
-                }
+                placeholder="Mouad Saber"
+                contentLeft={<FiUser className="" size={34}></FiUser>}
               />
             </div>
             <div className="col-4">
@@ -134,18 +126,9 @@ export default function Header() {
                 color="warning"
                 helperColor={helper.color}
                 helperText={helper.text}
-                type="email"
                 label="Telephone"
-                placeholder="With regex validation"
-                contentLeft={
-                  <Image
-                    src={bg}
-                    className=""
-                    width={200}
-                    height={200}
-                    alt="img"
-                  />
-                }
+                placeholder="06789876"
+                contentLeft={<FiPhone className="" size={34}></FiPhone>}
               />
             </div>
             <div className="col-4">
@@ -159,22 +142,14 @@ export default function Header() {
                 helperText={helper.text}
                 type="email"
                 label="Adresse e-mail"
-                placeholder="With regex validation"
-                contentLeft={
-                  <Image
-                    src={bg}
-                    className=""
-                    width={200}
-                    height={200}
-                    alt="img"
-                  />
-                }
+                placeholder="Mouad.saber@gmail.com"
+                contentLeft={<FiMail className="" size={34}></FiMail>}
               />
             </div>
           </row>
-          <row className="d-flex">
+          <row className="d-flex mt-4">
             <div className="col-8">
-            <Input
+              <Input
                 bordered
                 rounded
                 shadow={false}
@@ -182,22 +157,26 @@ export default function Header() {
                 color="warning"
                 helperColor={helper.color}
                 helperText={helper.text}
-                type="email"
-                label="Adresse e-mail"
-                width={480}
-                placeholder="With regex validation"
-               
+                type="text"
+                label="Comments"
+                width={580}
+                placeholder="Your comments"
               />
             </div>
             <div className="col-4 ">
-            <button className=" hover:bg-gray-400 w-56 font-semibold bg-yellow-500 text-white mt-4 py-2 px-8 rounded-3xl ">
-              Envoyer -&gt;
-            </button>
+              <button className=" hover:bg-gray-400 w-56 font-semibold bg-yellow-500 text-white mt-4 py-2 px-8 rounded-3xl ">
+                Envoyer -&gt;
+              </button>
             </div>
-
           </row>
-          <row className="pl-2">
-          <Checkbox className="pt-2" size="xs" defaultSelected={false}>I accept <span className="text-yellow-500"> &nbsp; the generate terms of use</span></Checkbox>
+          <row className="pl-2 ">
+            <Checkbox className="pt-3" size="xs" defaultSelected={false}>
+              I accept{" "}
+              <span className="text-yellow-500">
+                {" "}
+                &nbsp; the generate terms of use
+              </span>
+            </Checkbox>
           </row>
         </div>
       </div>

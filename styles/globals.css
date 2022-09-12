@@ -14,7 +14,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.btnReservation{
+  text-decoration: none;
 
+}
 * {
   box-sizing: border-box;
 }
@@ -271,3 +274,13 @@ ul.social-footer2 li a:hover {
 
 }
 
+.slick-list{
+  display: flex !important;
+}
+.card-body{
+  min-height: 230px !important;
+
+}
+.imgTemoignage{
+  border-radius: 60px;
+}

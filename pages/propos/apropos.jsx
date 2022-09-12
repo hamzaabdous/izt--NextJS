@@ -6,11 +6,14 @@ import TestemonySlides from "../Components/TestemonySlides";
 import Footer from "../Components/Footers";
 import Image from "next/image";
 import bg from "../../public/ccccccmen-removebg-preview.png";
+import { useRouter } from 'next/router'
 
 export default function apropos() {
-  const funcClick = () => {
-    alert("ALERT!!");
-  };
+  const router = useRouter()
+
+  const funcClick = (e) => {
+    e.preventDefault()
+    router.push('/')  };
   return (
     <>
       <Header></Header>
@@ -68,7 +71,7 @@ export default function apropos() {
              
               <row>
                 <div className="text-center pt-4">
-                  <button className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-72">
+                  <button onClick={funcClick}  className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-72">
                     Reserver
                   </button>
                 </div>

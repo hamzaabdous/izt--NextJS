@@ -4,8 +4,8 @@ import { FaPhoneAlt, FaMailBulk, FaMapMarker, FaTiktok } from "react-icons/fa";
 import bg from "../../public/IZT.png";
 
 const Footer = () => (
-  <footer className="page-footer font-small blue pt-4 ">
-    <div className="container-fluid text-md-left">
+  <footer className="page-footer font-small blue pt-8 ">
+    <div className="container-fluid text-md-left pt-16">
       <div className="row">
         <div className="col-xs-12 col-sm-6 col-md-4  mt-md-0 ml-md-0 px-5 mt-3 ">
           <div className="text-left">
