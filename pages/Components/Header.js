@@ -3,9 +3,111 @@ import bg from "../../public/IZT.png";
 import SideBar from "./SideBar";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { get, post } from "../api/ApiCall";
+import { useEffect } from "react";
+import useState from "react-usestateref";
 
 export default function Header() {
   const router = useRouter();
+  var [data, setData, Dataref] = useState([]);
+  var [Destination, setDestination, Destinationref] = useState(0);
+  var [Depart, setDepart, Departref] = useState(0);
+  var [Bagages, setBagages, Bagagesref] = useState(0);
+  var [Personne, setPersonne, Personneref] = useState(0);
+
+  var numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+  ];
+  useEffect(() => {
+    get("destination").then((r) => {
+      setData(r);
+    });
+  }, []);
+
+  function getDestination(e) {
+    var value = e.target.value;
+    setDestination(value);
+    console.log("destination", Destinationref.current);
+  }
+  function getDepart(e) {
+    var value = e.target.value;
+    setDepart(value);
+    console.log("depart", Departref.current);
+  }
+  function getBagages(e) {
+    var value = e.target.value;
+    setBagages(value);
+    console.log("Bagages", Bagagesref.current);
+  }
+  function getPersonne(e) {
+    var value = e.target.value;
+    setPersonne(value);
+    console.log("Personne", Personneref.current);
+  }
+  function SearchOffre() {
+    var model = {
+      NbrPersons: Personneref.current,
+      IdDepart: Departref.current,
+      destination_id: Destinationref.current,
+    };
+    post("reservation", "SearchOffre",model).then((r) => {
+      console.log("chearch offre", r);
+    });
+  }
 
   return (
     <div className="header-nav position-relative py-5">
@@ -66,12 +168,11 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-              <Link href="/contact/contact">
-
-                <a className="nav-link text-uppercase" href="#">
-                  {" "}
-                  <span className="d-none">&gt;</span>Contact
-                </a>
+                <Link href="/contact/contact">
+                  <a className="nav-link text-uppercase" href="#">
+                    {" "}
+                    <span className="d-none">&gt;</span>Contact
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -91,10 +192,14 @@ export default function Header() {
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
               id="department"
+              onChange={getPersonne}
             >
-              <option> Engineering</option>
-              <option>Design</option>
-              <option>Customer Support</option>
+              {numbers.map((i) => (
+                <option key={i} value={i}>
+                  {" "}
+                  {i}
+                </option>
+              ))}
             </select>
           </div>
           <div className="col-md-1">
@@ -102,10 +207,14 @@ export default function Header() {
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
               id="department"
+              onChange={getBagages}
             >
-              <option> Engineering</option>
-              <option>Design</option>
-              <option>Customer Support</option>
+              {numbers.map((i) => (
+                <option key={i} value={i}>
+                  {" "}
+                  {i}
+                </option>
+              ))}
             </select>
           </div>
           <div className="col-md-2">
@@ -113,10 +222,14 @@ export default function Header() {
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
               id="department"
+              onChange={getDepart}
             >
-              <option> Engineering</option>
-              <option>Design</option>
-              <option>Customer Support</option>
+              {data.map((d, i) => (
+                <option key={i} value={d.id}>
+                  {" "}
+                  {d.Label}
+                </option>
+              ))}
             </select>
           </div>
           <div className="col-md-2">
@@ -124,14 +237,21 @@ export default function Header() {
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
               id="department"
+              onChange={getDestination}
             >
-              <option> Engineering</option>
-              <option>Design</option>
-              <option>Customer Support</option>
+              {data.map((d, i) => (
+                <option key={i} value={d.id}>
+                  {" "}
+                  {d.Label}
+                </option>
+              ))}
             </select>
           </div>
           <div className="col-md-2 mt-4">
-            <button className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
+            <button
+              onClick={SearchOffre}
+              className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
+            >
               Rechercher
             </button>
           </div>
