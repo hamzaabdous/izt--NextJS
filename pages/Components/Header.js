@@ -269,28 +269,35 @@ export default function Header() {
           </div>
           <Card className="cardOffre" style={{ width: "20rem" }}>
             <Card.Body>
-              <Card.Title>{chearchOffreref.current.Label}</Card.Title>
-              <Card.Text className="text-yellow-500">
+              <Card.Title className="text-6xl">
+                <h1>{chearchOffreref.current.Label}</h1>
+              </Card.Title>
+              <Card.Text className="text-yellow-500 text-4xl">
                 {chearchOffreref.current.Prix}MAD
               </Card.Text>
               <div className="row">
-                <div className="col-6">
-                  <FaUserAlt className="text-yellow-500" size={40}></FaUserAlt>
-                  <h1 className="text-white text-3xl">2</h1>
+                <div className="col-6 d-flex ">
+                  <FaUserAlt className="" size={30}></FaUserAlt>
+                  <h1 className="text-white text-2xl pl-4">
+                    {Personneref.current}
+                  </h1>
                 </div>
-                <div className="col-6">
-                  <FaShoppingBag
-                    className="text-yellow-500"
-                    size={40}
-                  ></FaShoppingBag>
-                  <h1 className="text-white text-3xl">2</h1>
+                <div className="col-6 d-flex">
+                  <FaShoppingBag className="" size={30}></FaShoppingBag>
+                  <h1 className="text-white text-2xl pl-4">
+                    {Bagagesref.current}
+                  </h1>
                 </div>
               </div>
               <Card.Text>
-                Deplacement de départ : <br />
+                <span className="text-gray-400  text-xs">
+                  Deplacement de départ :{" "}
+                </span>{" "}
+                <br />{chearchOffreref.current.Depart}
               </Card.Text>
               <Card.Text>
-                Destination : <br />
+                <span className="text-gray-400  text-xs">Destination :</span>
+                <br />{chearchOffreref.current.Destination}
               </Card.Text>
               <button
                 onClick={SearchOffre}
