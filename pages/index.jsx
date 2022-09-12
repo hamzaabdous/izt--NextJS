@@ -12,7 +12,7 @@ import inst from "../public/insta.png";
 import f from "../public/f.png";
 import reactslick from "./reactslick.js";
 import Header from "./Components/Header";
-import { FaBriefcase ,FaUserAlt ,FaRoad,FaCity} from "react-icons/fa";
+import { FaBriefcase ,FaUserAlt ,FaRoad,FaCity,FaShoppingBag} from "react-icons/fa";
 import Slides from "./Components/Slider";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "./Components/TestemonySlides";

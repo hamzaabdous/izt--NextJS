@@ -6,7 +6,10 @@ import Link from "next/link";
 import { get, post } from "../api/ApiCall";
 import { useEffect } from "react";
 import useState from "react-usestateref";
-
+import Card from "react-bootstrap/Card";
+import { FaBriefcase, FaUserAlt, FaRoad, FaShoppingBag } from "react-icons/fa";
+import img from "../../public/IZT.png"
+import { tuple } from "@nextui-org/react";
 export default function Header() {
   const router = useRouter();
   var [data, setData, Dataref] = useState([]);
@@ -14,6 +17,8 @@ export default function Header() {
   var [Depart, setDepart, Departref] = useState(0);
   var [Bagages, setBagages, Bagagesref] = useState(0);
   var [Personne, setPersonne, Personneref] = useState(0);
+  var [chearchOffre, setchearchOffre, chearchOffreref] = useState([]);
+  var [hideOffre, sethideOffre, hideOffreref] = useState(true);
 
   var numbers = [
     1,
@@ -104,8 +109,10 @@ export default function Header() {
       IdDepart: Departref.current,
       destination_id: Destinationref.current,
     };
-    post("reservation", "SearchOffre",model).then((r) => {
-      console.log("chearch offre", r);
+    post("reservation", "SearchOffre", model).then((r) => {
+      setchearchOffre(r[0]);
+      sethideOffre(false);
+      console.log(r);
     });
   }
 
@@ -255,6 +262,49 @@ export default function Header() {
               Rechercher
             </button>
           </div>
+        </div>
+        <div className=" offre " hidden={hideOffreref.current}>
+        <Image
+      src={img}
+      width={100}
+          height={100}
+    />
+          <Card className="cardOffre" style={{ width: "20rem" }}>
+        
+                <Card.Body>
+                  <Card.Title>{chearchOffreref.current.Label}</Card.Title>
+                  <Card.Text className="text-yellow-500">{chearchOffreref.current.Prix}MAD</Card.Text>
+                  <div className="row">
+                    <div className="col-6">
+                      <FaUserAlt
+                        className="text-yellow-500"
+                        size={40}
+                      ></FaUserAlt>
+                      <h1 className="text-white text-3xl">2</h1>
+                    </div>
+                    <div className="col-6">
+                    <FaShoppingBag
+                        className="text-yellow-500"
+                        size={40}
+                      ></FaShoppingBag>
+                      <h1 className="text-white text-3xl">2</h1>
+                    </div>
+                  </div>
+                  <Card.Text>
+                    Deplacement de départ : <br />
+                  </Card.Text>
+                  <Card.Text>
+                    Destination : <br />
+                  </Card.Text>
+                  <button
+                    onClick={SearchOffre}
+                    className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
+                  >
+                    Reserver
+                  </button>
+                </Card.Body>
+            
+          </Card>
         </div>
       </div>
     </div>
