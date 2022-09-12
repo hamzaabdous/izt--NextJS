@@ -2,16 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // images: {
-  //   loader: 'imgix',
-  //   path: '/',
-  //   },
+  images: {
+    loader: 'akamai',
+    path: '/',
+    unoptimized:true
+  },
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
 
     return config;
   },
-  
+
 }
 
 module.exports = nextConfig
