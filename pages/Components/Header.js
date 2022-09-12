@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import useState from "react-usestateref";
 import Card from "react-bootstrap/Card";
 import { FaBriefcase, FaUserAlt, FaRoad, FaShoppingBag } from "react-icons/fa";
-import img from "../../public/IZT.png"
+import img from "../../public/IZT.png";
 import { tuple } from "@nextui-org/react";
 export default function Header() {
   const router = useRouter();
@@ -264,46 +264,41 @@ export default function Header() {
           </div>
         </div>
         <div className=" offre " hidden={hideOffreref.current}>
-        <Image
-      src={img}
-      width={100}
-          height={100}
-    />
+          <div className="offreimg">
+            <Image src={img} width={300} height={300} />
+          </div>
           <Card className="cardOffre" style={{ width: "20rem" }}>
-        
-                <Card.Body>
-                  <Card.Title>{chearchOffreref.current.Label}</Card.Title>
-                  <Card.Text className="text-yellow-500">{chearchOffreref.current.Prix}MAD</Card.Text>
-                  <div className="row">
-                    <div className="col-6">
-                      <FaUserAlt
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaUserAlt>
-                      <h1 className="text-white text-3xl">2</h1>
-                    </div>
-                    <div className="col-6">
-                    <FaShoppingBag
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaShoppingBag>
-                      <h1 className="text-white text-3xl">2</h1>
-                    </div>
-                  </div>
-                  <Card.Text>
-                    Deplacement de départ : <br />
-                  </Card.Text>
-                  <Card.Text>
-                    Destination : <br />
-                  </Card.Text>
-                  <button
-                    onClick={SearchOffre}
-                    className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
-                  >
-                    Reserver
-                  </button>
-                </Card.Body>
-            
+            <Card.Body>
+              <Card.Title>{chearchOffreref.current.Label}</Card.Title>
+              <Card.Text className="text-yellow-500">
+                {chearchOffreref.current.Prix}MAD
+              </Card.Text>
+              <div className="row">
+                <div className="col-6">
+                  <FaUserAlt className="text-yellow-500" size={40}></FaUserAlt>
+                  <h1 className="text-white text-3xl">2</h1>
+                </div>
+                <div className="col-6">
+                  <FaShoppingBag
+                    className="text-yellow-500"
+                    size={40}
+                  ></FaShoppingBag>
+                  <h1 className="text-white text-3xl">2</h1>
+                </div>
+              </div>
+              <Card.Text>
+                Deplacement de départ : <br />
+              </Card.Text>
+              <Card.Text>
+                Destination : <br />
+              </Card.Text>
+              <button
+                onClick={SearchOffre}
+                className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
+              >
+                Reserver
+              </button>
+            </Card.Body>
           </Card>
         </div>
       </div>
