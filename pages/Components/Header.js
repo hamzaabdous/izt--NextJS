@@ -10,6 +10,80 @@ import Card from "react-bootstrap/Card";
 import { FaBriefcase, FaUserAlt, FaRoad, FaShoppingBag } from "react-icons/fa";
 import img from "../../public/IZT.png";
 import { tuple } from "@nextui-org/react";
+
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
+import Row from "react-bootstrap/Row";
+import Form from "react-bootstrap/Form";
+
+function MydModalWithGrid(props) {
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter"       size="lg"
+    centered>
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Les informations personnel
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="show-grid">
+        <Container>
+          <Row>
+            <Col xs={12} md={6}>
+              <Form.Group className="mb-3" controlId="formBasicnom">
+                <Form.Label>Nom et prenom</Form.Label>
+                <Form.Control
+                  onChange={(e) => props.setNomEtPrenom(e.target.value)}
+                  type="text"
+                  placeholder="Nom et prenom"
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={12} md={6}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  onChange={(e) => props.setEmail(e.target.value)}
+                  type="email"
+                  placeholder="Enter email"
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          <br />
+          <Row>
+            <Col xs={12} md={6}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Ville</Form.Label>
+                <Form.Control
+                  onChange={(e) => props.setVille(e.target.value)}
+                  type="email"
+                  placeholder="Rabat"
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={12} md={6}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Tele</Form.Label>
+                <Form.Control
+                  onChange={(e) => props.setTele(e.target.value)}
+                  type="email"
+                  placeholder="06...."
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+        </Container>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+        <Button variant="warning" onClick={props.validerReservation}>Valider</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 export default function Header() {
   const router = useRouter();
   var [data, setData, Dataref] = useState([]);
@@ -19,6 +93,13 @@ export default function Header() {
   var [Personne, setPersonne, Personneref] = useState(0);
   var [chearchOffre, setchearchOffre, chearchOffreref] = useState([]);
   var [hideOffre, sethideOffre, hideOffreref] = useState(true);
+  var [modalShow, setModalShow, showref] = useState(false);
+
+  var [IdDestinationCarRange, setIdDestinationCarRange, IdDestinationCarRangeref] = useState(0);
+  var [NomEtPrenom, setNomEtPrenom, NomEtPrenomref] = useState("");
+  var [Email, setEmail, emailref] = useState("");
+  var [Ville, setVille, Villeref] = useState("");
+  var [Tele, setTele, Teleref] = useState("");
 
   var numbers = [
     1,
@@ -113,7 +194,33 @@ export default function Header() {
       setchearchOffre(r[0]);
       sethideOffre(false);
       console.log(r);
+      setIdDestinationCarRange(r[0].IdDestinationCarRange);
     });
+  }
+  function validerReservation() {
+    let tmpArray = NomEtPrenomref.current.split(' '); //split the name to an array
+
+    const lastname = tmpArray.pop(); // pop the last element of the aray and store it in "lastname" variable
+    const firstname = tmpArray.join(' '); // join the array to make first and middlename and store it in "firstname" variale
+    
+    var model = {
+      NbrPersons: Personneref.current,
+      NbrLuggage: Bagagesref.current,
+      FirstName: firstname,
+      LastName: lastname,
+      Email: emailref.current,
+      PhoneNumber: Teleref.current,
+      Ville: Villeref.current,
+      IdDestinationCarRange: IdDestinationCarRangeref.current,
+    };
+    console.log("model", model);
+
+     post("reservation", "create", model).then((r) => {
+      console.log(r);
+      swal("Good job!", "success", "success");
+
+    });  
+
   }
 
   return (
@@ -293,18 +400,29 @@ export default function Header() {
                 <span className="text-gray-400  text-xs">
                   Deplacement de départ :{" "}
                 </span>{" "}
-                <br />{chearchOffreref.current.Depart}
+                <br />
+                {chearchOffreref.current.Depart}
               </Card.Text>
               <Card.Text>
                 <span className="text-gray-400  text-xs">Destination :</span>
-                <br />{chearchOffreref.current.Destination}
+                <br />
+                {chearchOffreref.current.Destination}
               </Card.Text>
               <button
-                onClick={SearchOffre}
+                onClick={() => setModalShow(true)}
                 className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
               >
                 Reserver
               </button>
+              <MydModalWithGrid
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                validerReservation={validerReservation}
+                setVille={setVille}
+                setEmail={setEmail}
+                setTele={setTele}
+                setNomEtPrenom={setNomEtPrenom}
+              />
             </Card.Body>
           </Card>
         </div>

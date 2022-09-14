@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/styleService.css'
 import '../styles/styleApropos.css'
 import '../styles/styleContact.css'
+import swal from 'sweetalert';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
