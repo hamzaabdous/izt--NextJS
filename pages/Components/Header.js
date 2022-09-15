@@ -104,6 +104,7 @@ export default function Header() {
     console.log("Personne", Personneref.current);
   }
   function SearchOffre() {
+    console.log(Departref.current);
     var model = {
       NbrPersons: Personneref.current,
       IdDepart: Departref.current,

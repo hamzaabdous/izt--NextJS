@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Header from "./Header";
 import { FaBriefcase } from "react-icons/fa";
 import Slides from "../Components/Slider";

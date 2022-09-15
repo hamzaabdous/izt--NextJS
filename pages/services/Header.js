@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import bg from "../../public/IZT.png";
 import SideBar from "../Components/SideBar";

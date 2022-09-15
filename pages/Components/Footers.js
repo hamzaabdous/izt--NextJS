@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React from "react";
 import { FaPhoneAlt, FaMailBulk, FaMapMarker, FaTiktok } from "react-icons/fa";
@@ -40,6 +41,7 @@ const Footer = () => (
                   className="d-flex "
                   target="_blank"
                   title="Twitter"
+                  rel="noreferrer"
                 >
                   <span
                     className="bg-white rounded-full d-flex justify-content-center items-center mr-4"
@@ -58,7 +60,7 @@ const Footer = () => (
                   title="instagram"
                   className="d-flex "
                   target="_blank"
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/" rel="noreferrer"
                 >
                   {" "}
                   <span
@@ -78,7 +80,7 @@ const Footer = () => (
                   title="instagram"
                   className="d-flex "
                   target="_blank"
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/" rel="noreferrer"
                 >
                   {" "}
                   <span
