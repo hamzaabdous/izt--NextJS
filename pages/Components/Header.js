@@ -89,8 +89,8 @@ export default function Header() {
   var [data, setData, Dataref] = useState([]);
   var [Destination, setDestination, Destinationref] = useState(0);
   var [Depart, setDepart, Departref] = useState(0);
-  var [Bagages, setBagages, Bagagesref] = useState(0);
-  var [Personne, setPersonne, Personneref] = useState(0);
+  var [Bagages, setBagages, Bagagesref] = useState(1);
+  var [Personne, setPersonne, Personneref] = useState(1);
   var [chearchOffre, setchearchOffre, chearchOffreref] = useState([]);
   var [hideOffre, sethideOffre, hideOffreref] = useState(true);
   var [modalShow, setModalShow, showref] = useState(false);
@@ -161,6 +161,8 @@ export default function Header() {
   useEffect(() => {
     get("destination").then((r) => {
       setData(r);
+      setDestination(r[0].id);
+      setDepart(r[0].id)
     });
   }, []);
 
@@ -191,12 +193,22 @@ export default function Header() {
       IdDepart: Departref.current,
       destination_id: Destinationref.current,
     };
-    post("reservation", "SearchOffre", model).then((r) => {
-      setchearchOffre(r[0]);
-      sethideOffre(false);
-      console.log(r);
-      setIdDestinationCarRange(r[0].IdDestinationCarRange);
-    });
+    if(Destinationref.current != Departref.current)
+    {
+      post("reservation", "SearchOffre", model).then((r) => {
+        if(r[0]== null)
+        {
+          swal("Erreur", "Se traget ne trouve pas", "error");
+        }
+        setchearchOffre(r[0]);
+        sethideOffre(false);
+        console.log(r);
+        setIdDestinationCarRange(r[0]?.IdDestinationCarRange);
+      });
+    }else{
+      swal("Erreur", "Le trajet de depart doit étre different de trajet d'arrive", "error");
+    }
+
   }
   function validerReservation() {
     let tmpArray = NomEtPrenomref.current.split(' '); //split the name to an array
@@ -378,10 +390,10 @@ export default function Header() {
           <Card className="cardOffre" style={{ width: "20rem" }}>
             <Card.Body>
               <Card.Title className="text-6xl">
-                <h1>{chearchOffreref.current.Label}</h1>
+                <h1>{chearchOffreref.current?.Label}</h1>
               </Card.Title>
               <Card.Text className="text-yellow-500 text-4xl">
-                {chearchOffreref.current.Prix}MAD
+                {chearchOffreref.current?.Prix}MAD
               </Card.Text>
               <div className="row">
                 <div className="col-6 d-flex ">
@@ -402,12 +414,12 @@ export default function Header() {
                   Deplacement de départ :{" "}
                 </span>{" "}
                 <br />
-                {chearchOffreref.current.Depart}
+                {chearchOffreref.current?.Depart}
               </Card.Text>
               <Card.Text>
                 <span className="text-gray-400  text-xs">Destination :</span>
                 <br />
-                {chearchOffreref.current.Destination}
+                {chearchOffreref.current?.Destination}
               </Card.Text>
               <button
                 onClick={() => setModalShow(true)}
