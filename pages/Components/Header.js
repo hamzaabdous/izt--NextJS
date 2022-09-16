@@ -231,7 +231,7 @@ export default function Header() {
      post("reservation", "create", model).then((r) => {
       console.log(r);
       swal("Good job!", "success", "success");
-
+      setModalShow(false);
     });  
 
   }
@@ -307,10 +307,10 @@ export default function Header() {
         </div>
       </nav>
       <div className="text-center p-5 slogan">
-        <h2 className="position-relative font-normal">Trouvons ensemble</h2>
-        <h1 className="position-relative text-xl font-light">
-          La voiture ideale <span className="text-yellow-500">...</span>
-        </h1>
+        <h1 className="position-relative font-normal ">Trouvons ensemble</h1>
+        <h2 className="position-relative text-xl font-light pt-2">
+          La voiture ideale 
+        </h2>
       </div>
       <div className="reservation">
         <div className="row">

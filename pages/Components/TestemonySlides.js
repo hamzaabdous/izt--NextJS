@@ -22,21 +22,21 @@ const TestemonySlides = (props) => {
         slidesToScroll: 1
     };
     var data=[{
-        title: 'ccccc',
+        title: '',
         name: "Abdelfattah B",
         description:"je suis trés satisfait de l'expérience ! trés bon service",
         photo: "cc",
         nomEntreprise: "cc",
     },
     {
-        title: 'cc',
+        title: '',
         name: "Mouad S.",
         description:"vous êtes professionnels et serviable la voiture était bien soignée et le chauffeur était professionne  merci",
         photo: "cc",
         nomEntreprise: "cc",
     },
     {
-        title: 'cc',
+        title: '',
         name: "MOUHCINE S",
         description:"aeroport casa- rabat agdal RDV respecté et conditions de voyage trés satisfaisantes",
         photo: "cc",

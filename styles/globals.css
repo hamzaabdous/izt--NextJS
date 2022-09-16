@@ -169,6 +169,7 @@ select ::before {
 }
 .staff .izt-values ul li {
   color: white;
+  width: 500px;
 }
 .staff .izt-values ul li::before {
   content: '\2022';
