@@ -47,6 +47,7 @@ a {
 .header-nav .navbar {
   background-color: #b5b5b547 !important; /*whichever you want*/
   width: fit-content;
+  
 }
 .nav-cover {
   background-image: linear-gradient(0deg, rgb(30 30 30 / 70%), #000000),

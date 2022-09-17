@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { Input, useInput, Grid, Checkbox } from "@nextui-org/react";
 import React from "react";
-import { FiUser, FiPhone ,FiMail } from "react-icons/fi";
+import { FiUser, FiPhone, FiMail } from "react-icons/fi";
 
 export default function Header() {
   const router = useRouter();
@@ -27,7 +27,7 @@ export default function Header() {
     };
   }, [value]);
   return (
-    <div className="header-nav position-relative py-5">
+    <div className="header-nav position-relative py-5 ">
       <SideBar></SideBar>
       <div className="overlay">
         <div className="nav-cover"></div>
@@ -59,7 +59,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link href="/">
                   <a
-                    className="nav-link text-uppercase "
+                    className="nav-link text-uppercase active"
                     aria-current="page"
                     href="#"
                   >
@@ -86,7 +86,7 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <Link href="/contact/contact">
-                  <a className="nav-link text-uppercase active" href="#">
+                  <a className="nav-link text-uppercase" href="#">
                     {" "}
                     <span className="d-none">&gt;</span>Contact
                   </a>
@@ -162,7 +162,7 @@ export default function Header() {
                 placeholder="Your comments"
               />
             </div>
-            <div className="col-md-4 col-12">
+            <div className="col-md-4 col-12 ">
               <button className=" hover:bg-gray-400 w-56 font-semibold bg-yellow-500 text-white mt-4 py-2 px-8 rounded-3xl ">
                 Envoyer -&gt;
               </button>
