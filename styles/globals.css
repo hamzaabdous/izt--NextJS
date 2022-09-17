@@ -285,3 +285,7 @@ ul.social-footer2 li a:hover {
 .imgTemoignage{
   border-radius: 60px;
 }
+
+ul.social-footer2 li a:hover {
+   background-color: #ffffff00 !important; 
+}

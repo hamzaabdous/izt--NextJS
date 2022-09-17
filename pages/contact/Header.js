@@ -112,7 +112,7 @@ export default function Header() {
                 helperColor={helper.color}
                 helperText={helper.text}
                 label="Nom"
-                placeholder="Mouad Saber"
+                placeholder="prenom nom"
                 contentLeft={<FiUser className="" size={34}></FiUser>}
               />
             </div>
@@ -127,7 +127,7 @@ export default function Header() {
                 helperColor={helper.color}
                 helperText={helper.text}
                 label="Telephone"
-                placeholder="06789876"
+                placeholder="06......"
                 contentLeft={<FiPhone className="" size={34}></FiPhone>}
               />
             </div>
@@ -142,7 +142,7 @@ export default function Header() {
                 helperText={helper.text}
                 type="email"
                 label="Adresse e-mail"
-                placeholder="Mouad.saber@gmail.com"
+                placeholder="email@gmail.com"
                 contentLeft={<FiMail className="" size={34}></FiMail>}
               />
             </div>

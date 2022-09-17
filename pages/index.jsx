@@ -13,11 +13,18 @@ import inst from "../public/insta.png";
 import f from "../public/f.png";
 import reactslick from "./reactslick.js";
 import Header from "./Components/Header";
-import { FaBriefcase ,FaUserAlt ,FaRoad,FaCity,FaShoppingBag} from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaUserAlt,
+  FaRoad,
+  FaCity,
+  FaShoppingBag,
+} from "react-icons/fa";
 import Slides from "./Components/Slider";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "./Components/TestemonySlides";
 import Footer from "./Components/Footers";
+import { Row } from "react-bootstrap";
 
 export default function Home() {
   const funcClick = () => {
@@ -25,16 +32,17 @@ export default function Home() {
   };
   return (
     <>
-    <div id="reservation">
-      <Header></Header>
-    </div>
+      <div id="reservation">
+        <Header></Header>
+      </div>
       <div className="infos">
         <div className="container-fluid position-relative p-5">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-5">
               <div className="fancy-underline rounded"></div>
               <h1 className=" text-white text-3xl  font-light">
-                Faites confiance <br /> <a className="text-yellow-500 btnReservation">à nos</a>
+                Faites confiance <br />{" "}
+                <a className="text-yellow-500 btnReservation">à nos</a>
               </h1>
               <h5 className="text-white text-justify font-light mt-4 mb-8">
                 Avec plus que 30 véhicules différents, nous vous garantissonsle
@@ -44,7 +52,7 @@ export default function Home() {
               </h5>
             </div>
             <div className="col-md-2"></div>
-            <div className="col-md-4">
+            <div className="col-md-5">
               <div className="row">
                 <div className="col-md-6">
                   <div className="row">
@@ -79,44 +87,43 @@ export default function Home() {
                   </h4>
                 </div>
 
-                <div className="col-md-6 my-5">
-                  <div className="row">
-                    <div className="col-6">
-                      <h1 className="text-white text-3xl">+19</h1>
+                <div className="row">
+                  <div className="col-md-6 my-5">
+                    <div className="row">
+                      <div className="col-6">
+                        <h1 className="text-white text-3xl">+19</h1>
+                      </div>
+                      <div className="col-6">
+                        <FaCity className="text-yellow-500" size={40}></FaCity>
+                      </div>
                     </div>
-                    <div className="col-6">
-                      <FaCity
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaCity>
-                    </div>
+                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      sociétés conventionnées
+                    </h4>
                   </div>
-                  <h4 className=" text-white text-uppercase text-lg font-extralight">
-                    sociétés conventionnées
-                  </h4>
-                </div>
-                <div className="col-md-6 my-5">
-                  <div className="row">
-                    <div className="col-6">
-                      <h1 className="text-white text-3xl">+3460</h1>
+                  <div className="col-md-6 my-5">
+                    <div className="row">
+                      <div className="col-6">
+                        <h1 className="text-white text-3xl">+3460</h1>
+                      </div>
+                      <div className="col-6">
+                        <FaRoad className="text-yellow-500" size={40}></FaRoad>
+                      </div>
                     </div>
-                    <div className="col-6">
-                      <FaRoad
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaRoad>
-                    </div>
+                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      Trajets
+                    </h4>
                   </div>
-                  <h4 className=" text-white text-uppercase text-lg font-extralight">
-                    Trajets
-                  </h4>
                 </div>
               </div>
             </div>
           </div>
           <div className="text-center">
-            <a href="#reservation" className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
-              Reserver
+            <a
+              href="#reservation"
+              className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
+            >
+              Réserver
             </a>
           </div>
         </div>
@@ -144,8 +151,11 @@ export default function Home() {
                     <li>Véhicules propres et bien entretenus</li>
                     <li>Service client de premier tarif</li>
                   </ul>
-                  <a href="#reservation" className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow btnReservation">
-                    Reserver
+                  <a
+                    href="#reservation"
+                    className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow btnReservation"
+                  >
+                    Réserver
                   </a>
                 </div>
                 <div className="col-md-8 p-9 ">
@@ -174,8 +184,11 @@ export default function Home() {
             <TestemonySlides />
           </div>
           <div className="text-center">
-            <a href="#reservation" className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow">
-              Reserver
+            <a
+              href="#reservation"
+              className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
+            >
+              Réserver
             </a>
           </div>
         </div>
@@ -264,7 +277,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
       <Footer></Footer>

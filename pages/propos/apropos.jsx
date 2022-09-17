@@ -7,14 +7,15 @@ import TestemonySlides from "../Components/TestemonySlides";
 import Footer from "../Components/Footers";
 import Image from "next/image";
 import bg from "../../public/ccccccmen-removebg-preview.png";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 export default function apropos() {
-  const router = useRouter()
+  const router = useRouter();
 
   const funcClick = (e) => {
-    e.preventDefault()
-    router.push('/')  };
+    e.preventDefault();
+    router.push("/");
+  };
   return (
     <>
       <Header></Header>
@@ -31,11 +32,13 @@ export default function apropos() {
                     <span className="text-yellow-500">CEO</span>
                   </h1>
                   <h6 className=" text-white text-xl font-light">
-                    J’ai fondé cette entreprise en 1995 avec la <br/> vision d’offrir
-                    un service de transport de luxe <br/>de la plus haute qualité. Je
-                    vous invite à <br/>essayer notre service et je vous garantis<br/>
-                    personnellement que vous vivrez une<br/> expérience pleinement
-                    satisfaite
+                    J’ai fondé cette entreprise en 1995 avec la <br /> vision
+                    d’offrir un service de transport de luxe <br />
+                    de la plus haute qualité. Je vous invite à <br />
+                    essayer notre service et je vous garantis
+                    <br />
+                    personnellement que vous vivrez une
+                    <br /> expérience pleinement satisfaite
                   </h6>
                 </div>
                 <div className="col-md-5 ">
@@ -56,29 +59,32 @@ export default function apropos() {
         <div className="parentViewPropos ">
           <div className="trapezoidPropos ">
             <div className="container-fluid bg-containerPropos p-5 ">
-            <div>
+              <div>
                 <h2 className=" text-white font-extrabold text-center text-lowercase">
-              La parfaite collection {" "}
-                <span className="text-yellow-500 text-lowercase">
-                de véhicules
-                </span>{" "}
-               
-              </h2>
-              <h1 className="font-light text-base  text-white text-center">
-              quelle que soit votre <span className="text-yellow-500 text-lowercase">
-              occasion
-                </span>  choisissez notre service
-              </h1>
-             
-              <row>
-                <div className="text-center pt-4">
-                  <button onClick={funcClick}  className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-72">
-                    Reserver
-                  </button>
-                </div>
-              </row>
-            </div>
-              
+                  La parfaite collection{" "}
+                  <span className="text-yellow-500 text-lowercase">
+                    de véhicules
+                  </span>{" "}
+                </h2>
+                <h1 className="font-light text-base  text-white text-center">
+                  quelle que soit votre{" "}
+                  <span className="text-yellow-500 text-lowercase">
+                    occasion
+                  </span>{" "}
+                  choisissez notre service
+                </h1>
+
+                <row>
+                  <div className="text-center pt-4">
+                    <button
+                      onClick={funcClick}
+                      className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-72"
+                    >
+                      Réserver
+                    </button>
+                  </div>
+                </row>
+              </div>
             </div>
           </div>
         </div>

@@ -37,10 +37,7 @@ const Footer = () => (
             <ul className="social-footer2">
               <li className="">
                 <a
-                  href="https://twitter.com"
                   className="d-flex "
-                  target="_blank"
-                  title="Twitter"
                   rel="noreferrer"
                 >
                   <span
@@ -57,10 +54,7 @@ const Footer = () => (
               </li>
               <li className="">
                 <a
-                  title="instagram"
                   className="d-flex "
-                  target="_blank"
-                  href="https://www.instagram.com/" rel="noreferrer"
                 >
                   {" "}
                   <span
@@ -77,10 +71,7 @@ const Footer = () => (
               </li>
               <li className="">
                 <a
-                  title="instagram"
                   className="d-flex "
-                  target="_blank"
-                  href="https://www.instagram.com/" rel="noreferrer"
                 >
                   {" "}
                   <span
