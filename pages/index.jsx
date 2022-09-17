@@ -13,7 +13,7 @@ import inst from "../public/insta.png";
 import f from "../public/f.png";
 import reactslick from "./reactslick.js";
 import Header from "./Components/Header";
-import { FaBriefcase ,FaUserAlt ,FaRoad,FaCity,FaShoppingBag} from "react-icons/fa";
+import { FaBriefcase, FaUserAlt, FaRoad, FaCity, FaShoppingBag } from "react-icons/fa";
 import Slides from "./Components/Slider";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "./Components/TestemonySlides";
@@ -25,22 +25,21 @@ export default function Home() {
   };
   return (
     <>
-    <div id="reservation">
-      <Header></Header>
-    </div>
+      <div id="reservation">
+        <Header></Header>
+      </div>
       <div className="infos">
         <div className="container-fluid position-relative p-5">
           <div className="row">
             <div className="col-md-4">
               <div className="fancy-underline rounded"></div>
               <h1 className=" text-white text-3xl  font-light">
-                Faites confiance <br /> <a className="text-yellow-500 btnReservation">à nos</a>
+                Faites-nous  <br /> <a className="text-yellow-500 btnReservation">confiance</a>
               </h1>
               <h5 className="text-white text-justify font-light mt-4 mb-8">
-                Avec plus que 30 véhicules différents, nous vous garantissonsle
-                le meilleur voyage que vous pouvez imaginez. Nous vous emmenons
-                où vous voulez, quand vous voulez, et avec le véhicule qui vous
-                convient le mieux.
+                Avec plus que 30 véhicules différents, nous vous garantissons le meilleur voyage que vous pouvez imaginer.
+                Nous vous emmenons où vous voulez, quand vous voulez, et avec le véhicule qui vous convient le mieux.
+
               </h5>
             </div>
             <div className="col-md-2"></div>
@@ -136,16 +135,15 @@ export default function Home() {
                     Fondamentales
                   </h6>
                   <ul className="p-0">
-                    <li>Des chaufferus professionnels hautement formés</li>
-                    <li>La sécurité comme notre priorité la plus élevée</li>
-                    <li>Poursuite de l'am"lioration continue</li>
+                    <li>Des Chauffeurs Professionnels Hautement Formés</li>
+                    <li>La Sécurité Comme Une Priorité</li>
+                    <li>Poursuite de l'amélioration continue</li>
                     <li>Ponctualité et véracité</li>
-                    <li>Utlisiation innovante de la technologie</li>
+                    <li>Utilisation Innovante De La Technologie</li>
                     <li>Véhicules propres et bien entretenus</li>
-                    <li>Service client de premier tarif</li>
                   </ul>
                   <a href="#reservation" className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow btnReservation">
-                    Reserver
+                    Réserver
                   </a>
                 </div>
                 <div className="col-md-8 p-9 ">
@@ -192,79 +190,61 @@ export default function Home() {
               </h2>
               <h1 className=" text-white text-center">
                 {" "}
-                Faites votre{" "}
+                Voyagez avec nous, {" "}
                 <span className="text-yellow-500 text-uppercase">
-                  votre voyage
+                  à votre goût
                 </span>{" "}
               </h1>
-              <h5 className=" text-white text-center">
-                {" "}
-                à votre facon avec nous{" "}
-              </h5>
               <div className="row mt-5">
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    La sécurité d'abord{" "}
+                    Service à l’échelle nationale{" "}
                   </h6>
                   <p className="text-white text-center">
-                    Personnel
+                    Nous couverons
                     <br />
-                    expérimenté et
+                    le territoire national
                     <br />
-                    chaufferus <br />
-                    professionnels
+                    pour vos déplacements
+                    <br />
+                    professionnels ou personnels.
                   </p>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    Tarifs raisonnables{" "}
+                    Le plus LARGE parc{" "}
                   </h6>
                   <p className="text-white text-center">
-                    Nous pouvons
+                  Nous proposons un vaste parc 
                     <br />
-                    vous offrir le bon <br />
-                    véhicule au bon <br />
-                    prix pour s'adapter <br />à votre budget
+                    de véhicules comprenant des voitures  <br />
+                    berlines, SUV, VITO, limousines,  <br />
+                    des mini bus et des autocars,  <br />
+                    pour répondre à tous les besoins.
                   </p>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    La plus grande flotte
+                    Tarifs concurrentiels 
                   </h6>
                   <p className="text-white text-center">
-                    Nous proposons une
+                  Nous pouvons vous offrir
                     <br />
-                    vaste flotte de
+                    le bon véhicule au bon prix pour
                     <br />
-                    véhicule <br />
-                    comprenant des
+                    s’adapter à votre budget, 
                     <br />
-                    berlines Mercedes <br />
-                    vito des limousines <br />
-                    des mini bus et des <br />
-                    autocars <br />
-                  </p>
-                </div>
-                <div className="col-md-3">
-                  <h6 className=" text-yellow-500 text-center">
-                    {" "}
-                    Service à l'échelle nationale{" "}
-                  </h6>
-                  <p className="text-white text-center">
-                    Nous offrons nos services
-                    <br />
-                    de transport à l'échelle <br />
-                    nationale pour vos affaires <br />
-                    au loisirs
+                    et rester les mieux disant <br />
+                    sur le marché.<br />
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
       <Footer></Footer>

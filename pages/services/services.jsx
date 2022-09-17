@@ -23,13 +23,12 @@ export default function Service() {
               <div className="row">
                 <div className="col-md-4 izt-values p-5">
                   <h1 className=" text-white ">
-                    Notre <span className="text-yellow-500">staff</span>
+                  Notre clientèle cible <span className="text-yellow-500">clientèle cible</span>
                   </h1>
                   <h6 className=" text-white text-xl font-light">
-                    Nous adressons notre offre à tous ceux qui souhaitent
-                    voyager dans des conditions confortables.Nous avons plus de
-                    150 véhicules haut de gamme, afin que nos clients puissent
-                    être assurés du confort et de la sécurité.
+                  Nous adressons notre offre à tous ceux qui souhaitent voyager dans des conditions confortables.
+Particuliers ou professionnels, agence de voyage ou agence d’événementiels, nous adaptons notre offre, notre par cet nos ressources, pour répondre au mieux à vos exigences en quantité et en qualité.
+
                   </h6>
                   <ul className="p-0 lowercase">
                     <li>VÉHICULES PROPRES ET BIEN ENTRETENUS</li>
@@ -37,7 +36,7 @@ export default function Service() {
                    
                   </ul>
                   <button onClick={funcClick}  className="hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-96">
-                    Reserver
+                  Réserver
                   </button>
                 </div>
                 <div className="col-md-8 p-9 ">
