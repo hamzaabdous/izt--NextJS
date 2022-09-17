@@ -133,7 +133,7 @@ export default function Home() {
           <div className="trapezoid">
             <div className="container-fluid">
               <div className="row">
-                <div className="col-md-4 izt-values p-5">
+                <div className="col-md-7 col-sm-12 izt-values p-5">
                   <h1 className=" text-white ">
                     Notre <span className="text-yellow-500">staff</span>
                   </h1>
@@ -158,7 +158,7 @@ export default function Home() {
                     Réserver
                   </a>
                 </div>
-                <div className="col-md-8 p-9 ">
+                <div className="col-md-5 col-sm-12 p-9 ">
                   <Slides></Slides>
                 </div>
               </div>
@@ -170,16 +170,7 @@ export default function Home() {
         <div className="container-fluid p-5">
           <h1 className=" text-white text-3xl font-bold title">Témoignage</h1>
           <div className="fancy-underline rounded"></div>
-          <div className="d-flex justify-content-end">
-            <FaArrowCircleLeft
-              className="text-yellow-500 mr-2"
-              size={34}
-            ></FaArrowCircleLeft>
-            <FaArrowCircleRight
-              className="text-yellow-500 ml-2"
-              size={34}
-            ></FaArrowCircleRight>
-          </div>
+        
           <div>
             <TestemonySlides />
           </div>

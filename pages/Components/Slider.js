@@ -16,9 +16,12 @@ import Image from "next/image";
 const Slides = (props) => {
   const slider = useRef({});
   const next = () => {
+    console.log("slickNext")
     slider.slickNext();
   };
   const previous = () => {
+    console.log("slickPrev")
+
     slider.slickPrev();
   };
   const settings = {
@@ -26,7 +29,7 @@ const Slides = (props) => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
   };
@@ -43,8 +46,9 @@ const Slides = (props) => {
         <div className="imgSlideContiner"  key={2}>
           <Image src={s2} className="px-2 imgslide" width="400px" height="550px" alt="img" />
         </div>
+        
       </Slider>
-      <div className="d-flex justify-content-center pt-4 pl-96">
+      <div className="d-flex justify-content-center pt-4 ">
         <FaArrowCircleLeft
           onClick={previous}
           className="text-yellow-500 mx-2"

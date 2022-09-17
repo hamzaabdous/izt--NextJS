@@ -69,7 +69,7 @@ export default function apropos() {
                 <h1 className="font-light text-base  text-white text-center">
                   quelle que soit votre{" "}
                   <span className="text-yellow-500 text-lowercase">
-                    occasion
+                  événement 
                   </span>{" "}
                   choisissez notre service
                 </h1>
