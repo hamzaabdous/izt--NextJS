@@ -20,8 +20,12 @@ import Form from "react-bootstrap/Form";
 
 function MydModalWithGrid(props) {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter"       size="lg"
-    centered>
+    <Modal
+      {...props}
+      aria-labelledby="contained-modal-title-vcenter"
+      size="lg"
+      centered
+    >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Les informations personnel
@@ -78,7 +82,9 @@ function MydModalWithGrid(props) {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
-        <Button variant="warning" onClick={props.validerReservation}>Valider</Button>
+        <Button variant="warning" onClick={props.validerReservation}>
+          Valider
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -95,7 +101,11 @@ export default function Header() {
   var [hideOffre, sethideOffre, hideOffreref] = useState(true);
   var [modalShow, setModalShow, showref] = useState(false);
 
-  var [IdDestinationCarRange, setIdDestinationCarRange, IdDestinationCarRangeref] = useState(0);
+  var [
+    IdDestinationCarRange,
+    setIdDestinationCarRange,
+    IdDestinationCarRangeref,
+  ] = useState(0);
   var [NomEtPrenom, setNomEtPrenom, NomEtPrenomref] = useState("");
   var [Email, setEmail, emailref] = useState("");
   var [Ville, setVille, Villeref] = useState("");
@@ -162,7 +172,7 @@ export default function Header() {
     get("destination").then((r) => {
       setData(r);
       setDestination(r[0].id);
-      setDepart(r[0].id)
+      setDepart(r[0].id);
     });
   }, []);
 
@@ -193,11 +203,9 @@ export default function Header() {
       IdDepart: Departref.current,
       destination_id: Destinationref.current,
     };
-    if(Destinationref.current != Departref.current)
-    {
+    if (Destinationref.current != Departref.current) {
       post("reservation", "SearchOffre", model).then((r) => {
-        if(r[0]== null)
-        {
+        if (r[0] == null) {
           swal("Erreur", "Se traget ne trouve pas", "error");
         }
         setchearchOffre(r[0]);
@@ -205,17 +213,20 @@ export default function Header() {
         console.log(r);
         setIdDestinationCarRange(r[0]?.IdDestinationCarRange);
       });
-    }else{
-      swal("Erreur", "Le trajet de depart doit étre different de trajet d'arrive", "error");
+    } else {
+      swal(
+        "Erreur",
+        "Le trajet de depart doit étre different de trajet d'arrive",
+        "error"
+      );
     }
-
   }
   function validerReservation() {
-    let tmpArray = NomEtPrenomref.current.split(' '); //split the name to an array
+    let tmpArray = NomEtPrenomref.current.split(" "); //split the name to an array
 
     const lastname = tmpArray.pop(); // pop the last element of the aray and store it in "lastname" variable
-    const firstname = tmpArray.join(' '); // join the array to make first and middlename and store it in "firstname" variale
-    
+    const firstname = tmpArray.join(" "); // join the array to make first and middlename and store it in "firstname" variale
+
     var model = {
       NbrPersons: Personneref.current,
       NbrLuggage: Bagagesref.current,
@@ -228,12 +239,11 @@ export default function Header() {
     };
     console.log("model", model);
 
-     post("reservation", "create", model).then((r) => {
+    post("reservation", "create", model).then((r) => {
       console.log(r);
       swal("Good job!", "success", "success");
-
-    });  
-
+      setModalShow(false);
+    });
   }
 
   return (
@@ -307,14 +317,14 @@ export default function Header() {
         </div>
       </nav>
       <div className="text-center p-5 slogan">
-        <h2 className="position-relative font-normal">Trouvons ensemble</h2>
-        <h1 className="position-relative text-xl font-light">
-          La voiture ideale <span className="text-yellow-500">...</span>
-        </h1>
+        <h1 className="position-relative font-normal ">Trouvons ensemble</h1>
+        <h2 className="position-relative text-xl font-light pt-2">
+          La voiture ideale
+        </h2>
       </div>
       <div className="reservation">
-        <div className="row">
-          <div className="col-md-1">
+        <div className="row px-4">
+          <div className="col-md-1 col-6">
             <label>Personne</label>
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
@@ -329,7 +339,7 @@ export default function Header() {
               ))}
             </select>
           </div>
-          <div className="col-md-1">
+          <div className="col-md-1 col-6">
             <label>Bagages</label>
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
@@ -374,7 +384,7 @@ export default function Header() {
               ))}
             </select>
           </div>
-          <div className="col-md-2 mt-4">
+          <div className="col-md-2 col-6 mt-4">
             <button
               onClick={SearchOffre}
               className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
@@ -425,7 +435,7 @@ export default function Header() {
                 onClick={() => setModalShow(true)}
                 className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
               >
-                Reserver
+                Réserver
               </button>
               <MydModalWithGrid
                 show={modalShow}

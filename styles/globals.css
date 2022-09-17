@@ -47,6 +47,7 @@ a {
 .header-nav .navbar {
   background-color: #b5b5b547 !important; /*whichever you want*/
   width: fit-content;
+  
 }
 .nav-cover {
   background-image: linear-gradient(0deg, rgb(30 30 30 / 70%), #000000),
@@ -59,7 +60,7 @@ a {
 
 .nav-cover-service {
   background-image: linear-gradient(0deg, rgb(30 30 30 / 30%), #000000),
-    url('../public/slide2.png');
+    url('../public/carsImage.jpeg');
   width: 100%;
   height: 105%;
   background-repeat: no-repeat;
@@ -169,6 +170,7 @@ select ::before {
 }
 .staff .izt-values ul li {
   color: white;
+  width: 500px;
 }
 .staff .izt-values ul li::before {
   content: '\2022';
@@ -245,16 +247,16 @@ ul.social-footer2 li a:hover {
 
 
  .imgSlideContiner{
-  left: 45%;
+  left: 30%;
   position:relative !important;
-  margin-top: 50px !important;
+  margin-top: 30px !important;
 }
 .imgSlideContiner:before{
   content:'';
   position: absolute !important;
-  left: 9%;
-  top: -4%;
-  width: 100%;
+  left: 7%;
+  top: -3%;
+  width: 99.40%;
   height: 100%;
   border: 1px solid rgb(255, 215, 96);
   z-index: 1;
@@ -275,7 +277,6 @@ ul.social-footer2 li a:hover {
 }
 
 .slick-list{
-  display: flex !important;
 }
 .card-body{
   min-height: 230px !important;
@@ -283,4 +284,33 @@ ul.social-footer2 li a:hover {
 }
 .imgTemoignage{
   border-radius: 60px;
+}
+
+ul.social-footer2 li a:hover {
+   background-color: #ffffff00 !important; 
+}
+.scrolltest{
+  overflow:scroll !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  #test {
+      display: none;
+  }
+  
+}
+@media (min-width: 767px) {
+  #test2 {
+      display: none;
+  }
+  .scrolltest{
+    overflow:scroll !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    width: 600px;
+  }
+  
 }

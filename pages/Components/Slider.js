@@ -8,7 +8,7 @@ import {
   FaArrowCircleRight,
 } from "react-icons/fa";
 import { faL } from "@fortawesome/free-solid-svg-icons";
-import s2 from "../../public/slide2.png";
+import s2 from "../../public/carsImage.jpeg";
 import s3 from "../../public/slide3.png";
 
 import Image from "next/image";
@@ -16,9 +16,12 @@ import Image from "next/image";
 const Slides = (props) => {
   const slider = useRef({});
   const next = () => {
+    console.log("slickNext")
     slider.slickNext();
   };
   const previous = () => {
+    console.log("slickPrev")
+
     slider.slickPrev();
   };
   const settings = {
@@ -26,7 +29,7 @@ const Slides = (props) => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
   };
@@ -38,13 +41,14 @@ const Slides = (props) => {
     <div>
       <Slider ref={(c) => (slider = c)} {...settings}>
         <div className="imgSlideContiner" key={1}>
-          <Image src={s3} width="400px" height="550px"   className="mx-2 imgslide" alt="img" />
+          <Image src={s3} width="600px" height="550px"   className="mx-2 imgslide" alt="img" />
         </div>
         <div className="imgSlideContiner"  key={2}>
-          <Image src={s2} className="px-2 imgslide" width="400px" height="550px" alt="img" />
+          <Image src={s2} className="px-2 imgslide" width="600px" height="550px" alt="img" />
         </div>
+        
       </Slider>
-      <div className="d-flex justify-content-center pt-4 pl-96">
+      <div className="d-flex justify-content-center pt-4 ">
         <FaArrowCircleLeft
           onClick={previous}
           className="text-yellow-500 mx-2"

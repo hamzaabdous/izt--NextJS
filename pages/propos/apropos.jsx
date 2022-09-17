@@ -7,10 +7,10 @@ import TestemonySlides from "../Components/TestemonySlides";
 import Footer from "../Components/Footers";
 import Image from "next/image";
 import bg from "../../public/ccccccmen-removebg-preview.png";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 export default function apropos() {
-  const router = useRouter()
+  const router = useRouter();
 
   const funcClick = (e) => {
     e.preventDefault()
@@ -78,7 +78,6 @@ export default function apropos() {
                   </div>
                 </row>
               </div>
-
             </div>
           </div>
         </div>
