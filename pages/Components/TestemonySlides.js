@@ -136,7 +136,7 @@ const TestemonySlides = (props) => {
                     <div className="col-8">
                       <h4 className="text-lg font-normal ">{x.name}</h4>
                       <h6 className="text-sm text-gray-400 font-normal ">
-                        TLS
+                        
                       </h6>
                       <div className="d-flex">
                         <FaStar className="text-yellow-500" />
