@@ -100,8 +100,8 @@ export default function Header() {
       <div className=" mt-4 contactHeader"></div>
       <div className="p-5 contactHeader2">
         <div className="formContainer">
-          <row className="d-flex ">
-            <div className="col-4">
+          <div className="row">
+            <div className="col-md-4 col-12">
               <Input
                 bordered
                 rounded
@@ -116,7 +116,7 @@ export default function Header() {
                 contentLeft={<FiUser className="" size={34}></FiUser>}
               />
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-12">
               <Input
                 bordered
                 rounded
@@ -131,7 +131,7 @@ export default function Header() {
                 contentLeft={<FiPhone className="" size={34}></FiPhone>}
               />
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-12">
               <Input
                 bordered
                 rounded
@@ -146,9 +146,9 @@ export default function Header() {
                 contentLeft={<FiMail className="" size={34}></FiMail>}
               />
             </div>
-          </row>
-          <row className="d-flex mt-4">
-            <div className="col-8">
+          </div>
+          <div className="row mt-4">
+            <div className="col-md-8 col-12 ">
               <Input
                 bordered
                 rounded
@@ -159,16 +159,15 @@ export default function Header() {
                 helperText={helper.text}
                 type="text"
                 label="Comments"
-                width={580}
                 placeholder="Your comments"
               />
             </div>
-            <div className="col-4 ">
+            <div className="col-md-4 col-12">
               <button className=" hover:bg-gray-400 w-56 font-semibold bg-yellow-500 text-white mt-4 py-2 px-8 rounded-3xl ">
                 Envoyer -&gt;
               </button>
             </div>
-          </row>
+          </div>
           <row className="pl-2 ">
             <Checkbox className="pt-3" size="xs" defaultSelected={false}>
               I accept{" "}

@@ -323,8 +323,8 @@ export default function Header() {
         </h2>
       </div>
       <div className="reservation">
-        <div className="row">
-          <div className="col-md-1">
+        <div className="row px-4">
+          <div className="col-md-1 col-6">
             <label>Personne</label>
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
@@ -339,7 +339,7 @@ export default function Header() {
               ))}
             </select>
           </div>
-          <div className="col-md-1">
+          <div className="col-md-1 col-6">
             <label>Bagages</label>
             <select
               className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
@@ -384,7 +384,7 @@ export default function Header() {
               ))}
             </select>
           </div>
-          <div className="col-md-2 mt-4">
+          <div className="col-md-2 col-6 mt-4">
             <button
               onClick={SearchOffre}
               className=" hover:bg-gray-100  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"

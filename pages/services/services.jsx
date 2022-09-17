@@ -38,7 +38,7 @@ export default function Service() {
                   </ul>
                   <button
                     onClick={funcClick}
-                    className="hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-96"
+                    className="hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow sm:w-96 w-60"
                   >
                     Réserver
                   </button>

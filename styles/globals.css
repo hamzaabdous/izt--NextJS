@@ -288,3 +288,28 @@ ul.social-footer2 li a:hover {
 ul.social-footer2 li a:hover {
    background-color: #ffffff00 !important; 
 }
+.scrolltest{
+  overflow:scroll !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  #test {
+      display: none;
+  }
+  
+}
+@media (min-width: 767px) {
+  #test2 {
+      display: none;
+  }
+  .scrolltest{
+    overflow:scroll !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    width: 600px;
+  }
+  
+}

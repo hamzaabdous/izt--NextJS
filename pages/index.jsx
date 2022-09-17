@@ -52,12 +52,78 @@ export default function Home() {
               </h5>
             </div>
             <div className="col-md-2"></div>
-            <div className="col-md-5">
-              <div className="row">
-                <div className="col-md-6">
+            <div className="col-md-5 col-12">
+              <div id="test2" className="scrolltest  flex flex-row  inline-flex     ">
+                <div className="row px-8">
+                  <div className="col-6">
+                    <h1 className="text-white text-3xl">6 ans</h1>
+                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      ANS D'EXISTENCE
+                    </h4>
+                  </div>
+                  <div className="col-6">
+                    <FaBriefcase
+                      className="text-yellow-500"
+                      size={40}
+                    ></FaBriefcase>
+                  </div>
+                </div>
+                <div className="row px-8">
+                  <div className="col-6">
+                    <h1 className="text-white text-3xl">+2160</h1>
+                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      Clients particuliers
+                    </h4>
+                  </div>
+                  <div className="col-6">
+                    <FaUserAlt
+                      className="text-yellow-500"
+                      size={40}
+                    ></FaUserAlt>
+                  </div>
+                </div>
+                <div className="row px-8">
+                  <div className="col-6">
+                    <h1 className="text-white text-3xl">+19</h1>
+                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      sociétés conventionnées
+                    </h4>
+                  </div>
+                  <div className="col-6">
+                    <FaCity
+                      sociétés
+                      conventionnées
+                      className="text-yellow-500"
+                      size={40}
+                    ></FaCity>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-6">
+                    <h1 className="text-white text-2xl">+3460</h1>
+                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      Trajets{" "}
+                    </h4>
+                  </div>
+                  <div className="col-6">
+                    <FaRoad
+                    
+                      className="text-yellow-500"
+                      size={40}
+                    ></FaRoad>
+                  </div>
+                </div>
+              </div>
+
+              <div id="test"> 
+                <div className="row ">
+                <div className="col-6">
                   <div className="row">
                     <div className="col-6">
-                      <h1 className="text-white text-3xl">6 ans</h1>
+                      <h1 className="text-white text-2xl">6 ans</h1>
+                      <h4 className=" text-white text-uppercase text-lg font-extralight">
+                        ANS D'EXISTENCE
+                      </h4>
                     </div>
                     <div className="col-6">
                       <FaBriefcase
@@ -66,14 +132,14 @@ export default function Home() {
                       ></FaBriefcase>
                     </div>
                   </div>
-                  <h4 className=" text-white text-uppercase text-lg font-extralight">
-                    ANS D'EXISTENCE
-                  </h4>
                 </div>
-                <div className="col-md-6">
+                <div className="col-6">
                   <div className="row">
                     <div className="col-6">
-                      <h1 className="text-white text-3xl">+2160</h1>
+                      <h1 className="text-white text-2xl">+2160</h1>
+                      <h4 className=" text-white text-uppercase text-lg font-extralight">
+                      Clients particuliers
+                      </h4>
                     </div>
                     <div className="col-6">
                       <FaUserAlt
@@ -82,40 +148,46 @@ export default function Home() {
                       ></FaUserAlt>
                     </div>
                   </div>
-                  <h4 className=" text-white text-uppercase text-lg font-extralight">
-                    Clients particuliers
-                  </h4>
                 </div>
-
-                <div className="row">
-                  <div className="col-md-6 my-5">
-                    <div className="row">
-                      <div className="col-6">
-                        <h1 className="text-white text-3xl">+19</h1>
-                      </div>
-                      <div className="col-6">
-                        <FaCity className="text-yellow-500" size={40}></FaCity>
-                      </div>
-                    </div>
-                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+              </div>
+              <div className="row ">
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6">
+                      <h1 className="text-white text-2xl">+19</h1>
+                      <h4 className=" text-white text-uppercase text-lg font-extralight">
                       sociétés conventionnées
-                    </h4>
-                  </div>
-                  <div className="col-md-6 my-5">
-                    <div className="row">
-                      <div className="col-6">
-                        <h1 className="text-white text-3xl">+3460</h1>
-                      </div>
-                      <div className="col-6">
-                        <FaRoad className="text-yellow-500" size={40}></FaRoad>
-                      </div>
+                      </h4>
                     </div>
-                    <h4 className=" text-white text-uppercase text-lg font-extralight">
+                    <div className="col-6">
+                      <FaCity
+                        className="text-yellow-500"
+                        size={40}
+                      ></FaCity>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6">
+                      <h1 className="text-white text-2xl">+3460</h1>
+                      <h4 className=" text-white text-uppercase text-lg font-extralight">
                       Trajets
-                    </h4>
+                      </h4>
+                    </div>
+                    <div className="col-6">
+                    <FaRoad
+                      sociétés
+                      conventionnées
+                      className="text-yellow-500"
+                      size={40}
+                    ></FaRoad>
+                    </div>
                   </div>
                 </div>
               </div>
+              </div>
+              
             </div>
           </div>
           <div className="text-center">
@@ -170,7 +242,7 @@ export default function Home() {
         <div className="container-fluid p-5">
           <h1 className=" text-white text-3xl font-bold title">Témoignage</h1>
           <div className="fancy-underline rounded"></div>
-        
+
           <div>
             <TestemonySlides />
           </div>
