@@ -22,7 +22,7 @@ export default function Service() {
           <div className="trapezoid-service">
             <div className="container-fluid">
               <div className="row">
-                <div className="col-md-4 izt-values p-5">
+                <div className="col-md-7 col-sm-12 izt-values p-5">
                   <h1 className=" text-white ">
                     Notre <span className="text-yellow-500">staff</span>
                   </h1>
@@ -43,7 +43,7 @@ export default function Service() {
                     Réserver
                   </button>
                 </div>
-                <div className="col-md-8 p-9 ">
+                <div className="col-md-5 col-sm-12 p-9 ">
                   <Slides></Slides>
                 </div>
               </div>

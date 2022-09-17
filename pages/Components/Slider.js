@@ -8,7 +8,7 @@ import {
   FaArrowCircleRight,
 } from "react-icons/fa";
 import { faL } from "@fortawesome/free-solid-svg-icons";
-import s2 from "../../public/slide2.png";
+import s2 from "../../public/carsImage.jpeg";
 import s3 from "../../public/slide3.png";
 
 import Image from "next/image";
@@ -41,10 +41,10 @@ const Slides = (props) => {
     <div>
       <Slider ref={(c) => (slider = c)} {...settings}>
         <div className="imgSlideContiner" key={1}>
-          <Image src={s3} width="400px" height="550px"   className="mx-2 imgslide" alt="img" />
+          <Image src={s3} width="600px" height="550px"   className="mx-2 imgslide" alt="img" />
         </div>
         <div className="imgSlideContiner"  key={2}>
-          <Image src={s2} className="px-2 imgslide" width="400px" height="550px" alt="img" />
+          <Image src={s2} className="px-2 imgslide" width="600px" height="550px" alt="img" />
         </div>
         
       </Slider>
