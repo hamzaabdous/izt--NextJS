@@ -209,7 +209,18 @@ select ::before {
   display: flex;
   justify-content: center;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
-  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 97%);
+  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 97%);
+}
+@media (max-width: 768px) {
+  .characteristic .trapezoid {
+    background: #5a5a5a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 97%);
+  }
+  
 }
 
 footer {
@@ -296,6 +307,12 @@ ul.social-footer2 li a:hover {
   width: 400px;
 }
 
+.arrowScroll{
+
+  width: 100%;
+  margin: auto;
+}
+
 @media (max-width: 768px) {
   #test {
       display: none;
@@ -304,7 +321,7 @@ ul.social-footer2 li a:hover {
 }
 @media (min-width: 767px) {
   #test2 {
-      display: none;
+      display: none !important;
   }
   .scrolltest{
     overflow:scroll !important;

@@ -13,6 +13,10 @@ import inst from "../public/insta.png";
 import f from "../public/f.png";
 import reactslick from "./reactslick.js";
 import Header from "./Components/Header";
+import React, { Component, useEffect, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {
   FaBriefcase,
   FaUserAlt,
@@ -21,15 +25,43 @@ import {
   FaShoppingBag,
 } from "react-icons/fa";
 import Slides from "./Components/Slider";
+import Myslider from "./Components/Myslider";
+
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "./Components/TestemonySlides";
 import Footer from "./Components/Footers";
 import { Row } from "react-bootstrap";
 
-export default function Home() {
+export default function Home(props) {
+  var slider = useRef({});
+
   const funcClick = () => {
     alert("ALERT!!");
   };
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+  };
+  useEffect(() => {
+    console.log(slider);
+    slider.slickNext();
+  }, []);
+  const next = () => {
+    console.log("slickNext");
+    slider.slickNext();
+  };
+  const previous = () => {
+    console.log("slickPrev");
+
+    slider.slickPrev();
+  };
+
   return (
     <>
       <div id="reservation">
@@ -53,7 +85,10 @@ export default function Home() {
             </div>
             <div className="col-md-2"></div>
             <div className="col-md-5 col-12">
-              <div id="test2" className="scrolltest  flex flex-row  inline-flex     ">
+              <div
+                id="test2"
+                className="scrolltest  flex flex-row  inline-flex     "
+              >
                 <div className="row px-8">
                   <div className="col-6">
                     <h1 className="text-white text-3xl">6 ans</h1>
@@ -106,88 +141,80 @@ export default function Home() {
                     </h4>
                   </div>
                   <div className="col-6">
-                    <FaRoad
-                    
-                      className="text-yellow-500"
-                      size={40}
-                    ></FaRoad>
+                    <FaRoad className="text-yellow-500" size={40}></FaRoad>
                   </div>
                 </div>
               </div>
 
-              <div id="test"> 
+              <div id="test">
                 <div className="row ">
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6">
-                      <h1 className="text-white text-2xl">6 ans</h1>
-                      <h4 className=" text-white text-uppercase text-lg font-extralight">
-                        ANS D'EXISTENCE
-                      </h4>
+                  <div className="col-6">
+                    <div className="row">
+                      <div className="col-6">
+                        <h1 className="text-white text-2xl">6 ans</h1>
+                        <h4 className=" text-white text-uppercase text-lg font-extralight">
+                          ANS D'EXISTENCE
+                        </h4>
+                      </div>
+                      <div className="col-6">
+                        <FaBriefcase
+                          className="text-yellow-500"
+                          size={40}
+                        ></FaBriefcase>
+                      </div>
                     </div>
-                    <div className="col-6">
-                      <FaBriefcase
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaBriefcase>
+                  </div>
+                  <div className="col-6">
+                    <div className="row">
+                      <div className="col-6">
+                        <h1 className="text-white text-2xl">+2160</h1>
+                        <h4 className=" text-white text-uppercase text-lg font-extralight">
+                          Clients particuliers
+                        </h4>
+                      </div>
+                      <div className="col-6">
+                        <FaUserAlt
+                          className="text-yellow-500"
+                          size={40}
+                        ></FaUserAlt>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6">
-                      <h1 className="text-white text-2xl">+2160</h1>
-                      <h4 className=" text-white text-uppercase text-lg font-extralight">
-                      Clients particuliers
-                      </h4>
+                <div className="row ">
+                  <div className="col-6">
+                    <div className="row">
+                      <div className="col-6">
+                        <h1 className="text-white text-2xl">+19</h1>
+                        <h4 className=" text-white text-uppercase text-lg font-extralight">
+                          sociétés conventionnées
+                        </h4>
+                      </div>
+                      <div className="col-6">
+                        <FaCity className="text-yellow-500" size={40}></FaCity>
+                      </div>
                     </div>
-                    <div className="col-6">
-                      <FaUserAlt
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaUserAlt>
+                  </div>
+                  <div className="col-6">
+                    <div className="row">
+                      <div className="col-6">
+                        <h1 className="text-white text-2xl">+3460</h1>
+                        <h4 className=" text-white text-uppercase text-lg font-extralight">
+                          Trajets
+                        </h4>
+                      </div>
+                      <div className="col-6">
+                        <FaRoad
+                          sociétés
+                          conventionnées
+                          className="text-yellow-500"
+                          size={40}
+                        ></FaRoad>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="row ">
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6">
-                      <h1 className="text-white text-2xl">+19</h1>
-                      <h4 className=" text-white text-uppercase text-lg font-extralight">
-                      sociétés conventionnées
-                      </h4>
-                    </div>
-                    <div className="col-6">
-                      <FaCity
-                        className="text-yellow-500"
-                        size={40}
-                      ></FaCity>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6">
-                      <h1 className="text-white text-2xl">+3460</h1>
-                      <h4 className=" text-white text-uppercase text-lg font-extralight">
-                      Trajets
-                      </h4>
-                    </div>
-                    <div className="col-6">
-                    <FaRoad
-                      sociétés
-                      conventionnées
-                      className="text-yellow-500"
-                      size={40}
-                    ></FaRoad>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-              
             </div>
           </div>
           <div className="text-center">
@@ -258,8 +285,8 @@ export default function Home() {
       </div>
       <div className="characteristic ">
         <div className="parentView ">
-          <div className="trapezoid containercharacteristic">
-            <div className="container-fluid bg-container p-5">
+          <div className="trapezoid containercharacteristic ">
+            <div className="container-fluid bg-container p-5 ">
               <h2 className=" text-white text-center text-uppercase">
                 <span className="text-yellow-500 text-uppercase">
                   principales
@@ -277,69 +304,129 @@ export default function Home() {
                 {" "}
                 à votre facon avec nous{" "}
               </h5>
-              <div className="row mt-5">
-                <div className="col-md-3">
+              <div id="test2" className=" mt-5">
+                <div className="">
+                  <Slider ref={(c) => (slider = c)} {...settings}>
+                    <div className="col-md-3" key={1}>
+                      <h6 className=" text-yellow-500 text-center">
+                        {" "}
+                        La sécurité d'abord{" "}
+                      </h6>
+                      <p className="text-white text-center">
+                        Personnel
+                        <br />
+                        expérimenté et
+                        <br />
+                        chaufferus <br />
+                        professionnels
+                      </p>
+                    </div>
+                    <div className="col-md-3" key={2}>
+                      <h6 className=" text-yellow-500 text-center">
+                        {" "}
+                        Tarifs raisonnables{" "}
+                      </h6>
+                      <p className="text-white text-center">
+                        Nous pouvons
+                        <br />
+                        vous offrir le bon <br />
+                        véhicule au bon <br />
+                        prix pour s'adapter <br />à votre budget
+                      </p>
+                    </div>
+                    <div className="col-md-4" key={3}>
+                      <h6 className=" text-yellow-500 text-center">
+                        {" "}
+                        Le plus LARGE parc{" "}
+                      </h6>
+                      <p className="text-white text-center">
+                        Nous proposons un vaste parc
+                        <br />
+                        de véhicules comprenant des voitures <br />
+                        berlines, SUV, VITO, limousines, <br />
+                        des mini bus et des autocars, <br />
+                        pour répondre à tous les besoins.
+                      </p>
+                    </div>
+                    <div className="col-md-4" key={4}>
+                      <h6 className=" text-yellow-500 text-center">
+                        {" "}
+                        Service à l’échelle nationale{" "}
+                      </h6>
+                      <p className="text-white text-center">
+                        Nous couverons
+                        <br />
+                        le territoire national
+                        <br />
+                        pour vos déplacements
+                        <br />
+                        professionnels ou personnels.
+                      </p>
+                    </div>
+                  </Slider>
+                </div>
+              </div>
+              <div id="test" className="row mt-5 ">
+                <div className="col-md-4">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    La sécurité d'abord{" "}
+                    Service à l’échelle nationale{" "}
                   </h6>
                   <p className="text-white text-center">
-                    Personnel
+                    Nous couverons
                     <br />
-                    expérimenté et
+                    le territoire national
                     <br />
-                    chaufferus <br />
-                    professionnels
+                    pour vos déplacements
+                    <br />
+                    professionnels ou personnels.
                   </p>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    Tarifs raisonnables{" "}
+                    Le plus LARGE parc{" "}
                   </h6>
                   <p className="text-white text-center">
-                    Nous pouvons
+                  Nous proposons un vaste parc 
                     <br />
-                    vous offrir le bon <br />
-                    véhicule au bon <br />
-                    prix pour s'adapter <br />à votre budget
+                    de véhicules comprenant des voitures  <br />
+                    berlines, SUV, VITO, limousines,  <br />
+                    des mini bus et des autocars,  <br />
+                    pour répondre à tous les besoins.
                   </p>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    La plus grande flotte
+                    Tarifs concurrentiels 
                   </h6>
                   <p className="text-white text-center">
-                    Nous proposons une
+                  Nous pouvons vous offrir
                     <br />
-                    vaste flotte de
+                    le bon véhicule au bon prix pour
                     <br />
-                    véhicule <br />
-                    comprenant des
+                    s’adapter à votre budget, 
                     <br />
-                    berlines Mercedes <br />
-                    vito des limousines <br />
-                    des mini bus et des <br />
-                    autocars <br />
-                  </p>
-                </div>
-                <div className="col-md-3">
-                  <h6 className=" text-yellow-500 text-center">
-                    {" "}
-                    Service à l'échelle nationale{" "}
-                  </h6>
-                  <p className="text-white text-center">
-                    Nous offrons nos services
-                    <br />
-                    de transport à l'échelle <br />
-                    nationale pour vos affaires <br />
-                    au loisirs
+                    et rester les mieux disant <br />
+                    sur le marché.<br />
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div id="test2" className="arrowScroll d-flex absolute justify-content-center ">
+          <FaArrowCircleLeft
+            onClick={previous}
+            className="text-yellow-500 mx-2"
+            size={34}
+          ></FaArrowCircleLeft>
+          <FaArrowCircleRight
+            onClick={next}
+            className="text-yellow-500 mx-2"
+            size={34}
+          ></FaArrowCircleRight>
         </div>
       </div>
       <Footer></Footer>
