@@ -59,7 +59,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link href="/">
                   <a
-                    className="nav-link text-uppercase active"
+                    className="nav-link text-uppercase "
                     aria-current="page"
                     href="#"
                   >
@@ -86,7 +86,7 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <Link href="/contact/contact">
-                  <a className="nav-link text-uppercase" href="#">
+                  <a className="nav-link text-uppercase active" href="#">
                     {" "}
                     <span className="d-none">&gt;</span>Contact
                   </a>

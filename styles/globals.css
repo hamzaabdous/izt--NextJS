@@ -312,7 +312,9 @@ ul.social-footer2 li a:hover {
   width: 100%;
   margin: auto;
 }
-
+.offreimg{
+  background-color:#000000 !important;
+}
 @media (max-width: 768px) {
   #test {
       display: none;
