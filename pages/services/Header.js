@@ -83,30 +83,80 @@ export default function Header() {
           </div>
         </div>
       </nav>
-      <div className="text-center p-10 slogan">
-        <h1 className="position-relative text-lg font-normal">
-          Nous offrons les meilleurs services de transport. <br />
-          <br /> Nous proposons la location de bus, de passagers
-          <br />
-          <br /> et de limousines.
-        </h1>
-        <ul className="position-relative text-center text-lg font-normal lowercase p-2 test">
-          <li className="hamza p-2">
-            <span className="point"></span> DES CHAUFFEURS PROFESSIONNELS HAUTEMENT FORMÉS
-          </li>
-          <li className="hamza ">
-            <span className="point"></span> POURSUITE DE L'AMÉLIORATION CONTINUE
-          </li><br/>
-          
-          <li className="hamza">
-            <span className="point"></span> LA SÉCURITÉ COMME NOTRE PRIORITÉ LA PLUS ÉLEVÉE
-          </li>         
-          <li className="hamza">
-            <span className="point"></span>PONCTUALITÉ ET VÉRACITÉ
-          </li>
-          
-        </ul>
-      </div>
+      <div className="container-fluid bg-container p-5 position-relative">
+              <h2 className=" text-white text-center text-uppercase">
+                <span className="text-yellow-500 text-uppercase">
+                IZT
+                </span>{" "}
+              </h2>
+              <h1 className=" text-white text-center">
+                {" "}
+                votre partenaire , {" "}
+                <span className="text-yellow-500 text-uppercase">
+                routier de confiance
+                </span>{" "}
+              </h1>
+              <div className="row mt-5">
+                <div className="col-md-3">
+                  <h6 className=" text-yellow-500 text-center">
+                    {" "}
+                    IZT- Events{" "}
+                  </h6>
+                  <p className="text-white text-center">
+                  Nous vous accompagnons pour l'ensemble de vos déplacements événementiels, 
+                    <br />
+                    , vous et vos invités.
+Quel que soit le nombre, la destination, ou l'horaire, nos       
+              <br />
+              nos véhicules serons à votre disposition H24 
+                    <br />
+                    professionnels ou personnels.
+                  </p>
+                </div>
+                <div className="col-md-3">
+                  <h6 className=" text-yellow-500 text-center">
+                    {" "}
+                    IZT- Voyages{" "}
+                  </h6>
+                  <p className="text-white text-center">
+                  Tracez votre trajet, personnalisez-le, et laissez nous vous emmenez !
+                    <br />
+                    Des voitures berlines ou SUV, des voitures H1, ou même des bus à grande charge,  <br />
+                    berlines, SUV, VITO, limousines,  <br />
+                    , mobilisés par des chauffeurs de confiance <br />
+                    , pour passer les meilleurs séjours touristiques ou professionnels.
+                  </p>
+                </div>
+                <div className="col-md-3">
+                  <h6 className=" text-yellow-500 text-center">
+                    {" "}
+                    IZT - Aéroport
+                  </h6>
+                  <p className="text-white text-center">
+                  INTERVILLE ZEROUAL, vous assure le voyage Aller -Retour, 
+                    <br />
+                    de chez-vous, à l'ensemble des aéroports du territoire marocain, et vice versa.
+                    <br />
+                    Une voiture avec chauffeur expérimenté, à votre disposition, 
+                    <br />
+                    , vous et votre famille, amis ou partenaires pro !
+                  </p>
+                </div>
+                <div className="col-md-3">
+                  <h6 className=" text-yellow-500 text-center">
+                    {" "}
+                    	IZT- VIP
+                  </h6>
+                  <p className="text-white text-center">
+                  Des voitures limousines à votre disposition, 
+                    <br />
+                    de chez-vous, à l'ensemble des aéroports du territoire marocain, et vice versa.
+                    <br />
+                    , un service de luxe pour des moments spéciaux.
+                  </p>
+                </div>
+              </div>
+            </div>
     </div>
   );
 }

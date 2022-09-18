@@ -13,8 +13,8 @@ export default function apropos() {
   const router = useRouter();
 
   const funcClick = (e) => {
-    e.preventDefault();
-    router.push("/");
+    e.preventDefault()
+    router.push('/')
   };
   return (
     <>
@@ -32,13 +32,10 @@ export default function apropos() {
                     <span className="text-yellow-500">CEO</span>
                   </h1>
                   <h6 className=" text-white text-xl font-light">
-                    J’ai fondé cette entreprise en 1995 avec la <br /> vision
-                    d’offrir un service de transport de luxe <br />
-                    de la plus haute qualité. Je vous invite à <br />
-                    essayer notre service et je vous garantis
-                    <br />
-                    personnellement que vous vivrez une
-                    <br /> expérience pleinement satisfaite
+                    Nous sommes une société marocaine, d’où nous inspirons notre authenticité et notre culture de qualité d’accueil et de convivialité.
+                    Notre devise est notre image de marque, c’est la raison pour laquelle nous nous battons tout le temps pour l’améliorer davantage. Restons à la hauteur c’est notre souci permanant.
+                    IZT, est votre partenaire de confiance.
+
                   </h6>
                 </div>
                 <div className="col-md-5 ">
@@ -61,26 +58,22 @@ export default function apropos() {
             <div className="container-fluid bg-containerPropos p-5 ">
               <div>
                 <h2 className=" text-white font-extrabold text-center text-lowercase">
-                  La parfaite collection{" "}
+                  La parfaite collection {" "}
                   <span className="text-yellow-500 text-lowercase">
                     de véhicules
                   </span>{" "}
+
                 </h2>
                 <h1 className="font-light text-base  text-white text-center">
-                  quelle que soit votre{" "}
-                  <span className="text-yellow-500 text-lowercase">
-                  événement 
-                  </span>{" "}
-                  choisissez notre service
+                  quelle que soit votre <span className="text-yellow-500 text-lowercase">
+                    occasion
+                  </span>  choisissez notre service
                 </h1>
 
                 <row>
                   <div className="text-center pt-4">
-                    <button
-                      onClick={funcClick}
-                      className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-72"
-                    >
-                      Réserver
+                    <button onClick={funcClick} className=" hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow w-72">
+                      Reserver
                     </button>
                   </div>
                 </row>
