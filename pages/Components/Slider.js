@@ -10,6 +10,12 @@ import {
 import { faL } from "@fortawesome/free-solid-svg-icons";
 import s2 from "../../public/carsImage.jpeg";
 import s3 from "../../public/slide3.png";
+import s4 from "../../public/1.jpeg";
+import s5 from "../../public/2.jpeg";
+import s6 from "../../public/3.jpeg";
+import s7 from "../../public/4.jpeg";
+import s8 from "../../public/5.jpeg";
+import s9 from "../../public/6.jpeg";
 
 import Image from "next/image";
 
@@ -46,7 +52,24 @@ const Slides = (props) => {
         <div className="imgSlideContiner"  key={2}>
           <Image src={s2} className="px-2 imgslide" width="600px" height="550px" alt="img" />
         </div>
-        
+        <div className="imgSlideContiner"  key={3}>
+          <Image src={s4} className="px-2 imgslide" width="600px" height="550px" alt="img" />
+        </div>
+        <div className="imgSlideContiner"  key={4}>
+          <Image src={s5} className="px-2 imgslide" width="600px" height="550px" alt="img" />
+        </div>
+        <div className="imgSlideContiner"  key={5}>
+          <Image src={s6} className="px-2 imgslide" width="600px" height="550px" alt="img" />
+        </div>
+        <div className="imgSlideContiner"  key={6}>
+          <Image src={s7} className="px-2 imgslide" width="600px" height="550px" alt="img" />
+        </div>
+        <div className="imgSlideContiner"  key={7}>
+          <Image src={s8} className="px-2 imgslide" width="600px" height="550px" alt="img" />
+        </div>
+        <div className="imgSlideContiner"  key={8}>
+          <Image src={s9} className="px-2 imgslide" width="600px" height="550px" alt="img" />
+        </div>
       </Slider>
       <div className="d-flex justify-content-center pt-4 ">
         <FaArrowCircleLeft

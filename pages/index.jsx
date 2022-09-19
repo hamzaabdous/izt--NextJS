@@ -337,9 +337,7 @@ export default function Home(props) {
                     véhicule <br />
                     comprenant des
                     <br />
-                    berlines Mercedes <br />
-                    vito des limousines <br />
-                    des mini bus et des <br />
+                     mini bus et des <br />
                     autocars <br />
                   </p>
                 </div>
