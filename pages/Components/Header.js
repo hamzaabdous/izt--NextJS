@@ -100,6 +100,7 @@ export default function Header() {
   var [chearchOffre, setchearchOffre, chearchOffreref] = useState([]);
   var [hideOffre, sethideOffre, hideOffreref] = useState(true);
   var [modalShow, setModalShow, showref] = useState(false);
+  var [typeP, settypeP, typePref] = useState('');
 
   var [
     IdDestinationCarRange,
@@ -194,6 +195,16 @@ export default function Header() {
   function getPersonne(e) {
     var value = e.target.value;
     setPersonne(value);
+    if (value<4) {
+      settypeP("Berlin")
+    }
+    else if (value=4 && value<8) {
+      settypeP("H1")
+
+    }else{
+      settypeP("Minibus")
+
+    }
     console.log("Personne", Personneref.current);
   }
   function SearchOffre() {
@@ -400,7 +411,7 @@ export default function Header() {
           <Card className="cardOffre" style={{ width: "20rem" }}>
             <Card.Body>
               <Card.Title className="text-6xl">
-                <h1>{chearchOffreref.current?.Label}</h1>
+                <h1>{chearchOffreref.current?.Label} {typePref.current}</h1>
               </Card.Title>
               <Card.Text className="text-yellow-500 text-4xl">
                 {chearchOffreref.current?.Prix}MAD
