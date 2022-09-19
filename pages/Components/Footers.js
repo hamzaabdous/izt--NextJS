@@ -20,11 +20,11 @@ const Footer = () => (
           </div>
           <p className="text-white text-justify">
             Interville ZEROUAL TRANSPORT Votre partenaire de voyage sur
-            l'ensemble du territoire Marocain Avec plus que 30 véhicules
+            l'ensemble du territoire Marocain. Avec plus que 30 véhicules
             différents et un staff expérimenté, nous vous accompagnons sur les
-            longs comme les les déplacements courts trajets, pour assurer votre
-            confort et votre sécurité. Nous vous emmenons où vous voulez, quand
-            vous voulez, et avec le véhicule qui vous convient le mieux.{" "}
+            longs trajets, aussi bien que les courts déplacements , pour assurer
+            votre confort et votre sécurité. Nous vous emmenons où vous voulez,
+            quand vous voulez, et avec le véhicule qui vous convient.{" "}
           </p>
         </div>
 
@@ -36,10 +36,7 @@ const Footer = () => (
 
             <ul className="social-footer2">
               <li className="">
-                <a
-                  className="d-flex "
-                  rel="noreferrer"
-                >
+                <a className="d-flex " rel="noreferrer">
                   <span
                     className="bg-white rounded-full d-flex justify-content-center items-center mr-4"
                     style={{ height: "35px", width: "35px" }}
@@ -53,9 +50,7 @@ const Footer = () => (
                 </a>
               </li>
               <li className="">
-                <a
-                  className="d-flex "
-                >
+                <a className="d-flex ">
                   {" "}
                   <span
                     className="bg-white rounded-full d-flex justify-content-center items-center mr-4"
@@ -70,9 +65,7 @@ const Footer = () => (
                 </a>
               </li>
               <li className="">
-                <a
-                  className="d-flex "
-                >
+                <a className="d-flex ">
                   {" "}
                   <span
                     className="bg-white rounded-full d-flex justify-content-center items-center mr-4"

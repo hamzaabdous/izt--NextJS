@@ -13,6 +13,8 @@ import inst from "../public/insta.png";
 import f from "../public/f.png";
 import reactslick from "./reactslick.js";
 import Header from "./Components/Header";
+import React, { Component, useEffect, useRef } from "react";
+
 import {
   FaBriefcase,
   FaUserAlt,
@@ -21,7 +23,7 @@ import {
   FaShoppingBag,
 } from "react-icons/fa";
 import Slides from "./Components/Slider";
-import Myslider from "./Components/Myslider";
+import Slider from "react-slick";
 
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import TestemonySlides from "./Components/TestemonySlides";
@@ -46,7 +48,7 @@ export default function Home(props) {
   };
   useEffect(() => {
     console.log(slider);
-    slider.slickNext();
+    //slider.slickNext();
   }, []);
   const next = () => {
     console.log("slickNext");
@@ -263,7 +265,7 @@ export default function Home(props) {
           <div>
             <TestemonySlides />
           </div>
-          <div className="text-center">
+          <div className="text-center pt-8">
             <a
               href="#reservation"
               className="btnReservation hover:bg-gray-400  font-semibold bg-yellow-600 text-white py-2 px-8 rounded-lg shadow"
