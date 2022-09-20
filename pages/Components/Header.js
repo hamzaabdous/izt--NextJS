@@ -411,7 +411,7 @@ export default function Header() {
           <Card className="cardOffre" style={{ width: "20rem" }}>
             <Card.Body>
               <Card.Title className="text-6xl">
-                <h1>{chearchOffreref.current?.Label} {typePref.current}</h1>
+                <h1> {typePref.current}</h1>
               </Card.Title>
               <Card.Text className="text-yellow-500 text-4xl">
                 {chearchOffreref.current?.Prix}MAD
