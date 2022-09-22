@@ -128,9 +128,8 @@ Quel que soit le nombre, la destination, ou l'horaire, nos
                   </p>
                 </div>
                 <div className="col-md-3">
-                  <h6 className=" text-yellow-500 text-center">
-                    {" "}
-                    IZT - Aéroport
+                  <h6 className="text-yellow-500 text-center">
+                    IZT-Aéroport
                   </h6>
                   <p className="text-white text-center">
                   INTERVILLE ZEROUAL, vous assure le voyage Aller -Retour, 
@@ -145,7 +144,7 @@ Quel que soit le nombre, la destination, ou l'horaire, nos
                 <div className="col-md-3">
                   <h6 className=" text-yellow-500 text-center">
                     {" "}
-                    	IZT- VIP
+                    IZT- VIP
                   </h6>
                   <p className="text-white text-center">
                   Des voitures limousines à votre disposition, 

@@ -292,10 +292,7 @@ export default function Home(props) {
                   à votre goût
                 </span>{" "}
               </h1>
-              <h5 className=" text-white text-center">
-                {" "}
-                à votre facon avec nous{" "}
-              </h5>
+             
               <div className="row mt-5">
                 <div className="col-md-3">
                   <h6 className=" text-yellow-500 text-center">

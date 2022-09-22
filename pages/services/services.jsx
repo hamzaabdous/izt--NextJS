@@ -24,7 +24,7 @@ export default function Service() {
               <div className="row">
                 <div className="col-md-7 col-sm-12 izt-values p-5">
                   <h1 className=" text-white ">
-                  Notre clientèle cible <span className="text-yellow-500">clientèle cible</span>
+                  Notre <span className="text-yellow-500">clientèle cible</span>
                   </h1>
                   <h6 className=" text-white text-xl font-light">
                   Nous adressons notre offre à tous ceux qui souhaitent voyager dans des conditions confortables.

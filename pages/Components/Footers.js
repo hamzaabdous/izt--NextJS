@@ -61,7 +61,7 @@ const Footer = () => (
                       style={{ fontSize: "20px", color: "rgb(255, 215, 96)" }}
                     />
                   </span>{" "}
-                  izt@navette.Com{" "}
+                  contact@IZTOURS.com{" "}
                 </a>
               </li>
               <li className="">
@@ -101,7 +101,7 @@ const Footer = () => (
 
     <div className="footer-copyright bg-yellow-500 text-center py-3">
       © 2022 Copyright:
-      <a href="https://izt.com/"> izt.com</a>
+      <a href="https://izt.com/"> izt.com</a>powred by Tradeline-solutions
     </div>
   </footer>
 );

@@ -81,7 +81,7 @@ export default function Header() {
       <div className="text-center p-10 slogan">
         <h1 className="position-relative text-lg font-normal lowercase">
           <span className="text-yellow-300 uppercase">INTERVILLE ZEROUAL </span>{" "}
-          <span className="uppercase"> T</span>RANSORT SARL
+          <span className="uppercase"> T</span>ransport SARL
         </h1>
         <p className="position-relative text-white text-3xl font-normal lowercase p-4">
           La société a vue le jour, dans le but de fructifier l’expérience de son fondateur Mr ZEROUAL ABDELKRIM, ayant cumulé plus que 20 ans d’expérience dans le domaine du transport touristique, ainsi pour fonder un organisme qui donnera un nouveau souffle au secteur, mais sur tout qui confirmera le principe de « la qualité » comme premier pilier.
@@ -91,9 +91,9 @@ export default function Header() {
          <br></br>
          <br></br>
 
-          <h3 className="uppercase">IZT
+          <h3 className="uppercase text-yellow-300 text-3xl">IZT
             Chiffres clés</h3>
-          <ul className="p-0">
+          <ul className="p-0 text-xl">
             <li>+19 sociétés Conventionnées</li>
             <li>6 ANS D'EXISTENCE</li>
             <li>+2160 Clients particuliers </li>
@@ -101,8 +101,8 @@ export default function Header() {
           </ul>
           <br></br>
 
-          <h3 className="uppercase">NOS VALEURS :</h3>
-          <ul className="p-0">
+          <h3 className="uppercase text-yellow-300 text-3xl">NOS VALEURS :</h3>
+          <ul className="p-0 text-xl">
             <li>La qualité </li>
             <li>L’engagement </li>
             <li>La convivialité </li>
