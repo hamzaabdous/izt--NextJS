@@ -70,7 +70,7 @@ export default function apropos() {
                   <span className="text-yellow-500 text-lowercase">
                   événement 
                   </span>
-                  choisissez notre service
+                  {" "}choisissez notre service
                 </h1>
 
                 <row>

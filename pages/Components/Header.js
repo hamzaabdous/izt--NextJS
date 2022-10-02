@@ -199,7 +199,7 @@ export default function Header() {
       settypeP("Berlin")
     }
     else if (value=4 && value<8) {
-      settypeP("H1")
+      settypeP("Voiture vanne")
 
     }else{
       settypeP("Minibus")
@@ -347,7 +347,7 @@ export default function Header() {
                   {" "}
                   {i}
                 </option>
-              ))}
+              ))} 
             </select>
           </div>
           <div className="col-md-1 col-6">
@@ -357,12 +357,12 @@ export default function Header() {
               id="department"
               onChange={getBagages}
             >
-              {numbers.map((i) => (
+               {numbers.map((i) => (
                 <option key={i} value={i}>
                   {" "}
                   {i}
                 </option>
-              ))}
+              ))} 
             </select>
           </div>
           <div className="col-md-2">
@@ -372,12 +372,12 @@ export default function Header() {
               id="department"
               onChange={getDepart}
             >
-              {data.map((d, i) => (
+               {data.map((d, i) => (
                 <option key={i} value={d.id}>
                   {" "}
                   {d.Label}
                 </option>
-              ))}
+              ))} 
             </select>
           </div>
           <div className="col-md-2">
@@ -387,12 +387,12 @@ export default function Header() {
               id="department"
               onChange={getDestination}
             >
-              {data.map((d, i) => (
+               {data.map((d, i) => (
                 <option key={i} value={d.id}>
                   {" "}
                   {d.Label}
                 </option>
-              ))}
+              ))} 
             </select>
           </div>
           <div className="col-md-2 col-6 mt-4">

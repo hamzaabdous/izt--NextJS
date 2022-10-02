@@ -28,7 +28,7 @@ export default function Service() {
                   </h1>
                   <h6 className=" text-white text-xl font-light">
                   Nous adressons notre offre à tous ceux qui souhaitent voyager dans des conditions confortables.
-Particuliers ou professionnels, agence de voyage ou agence d’événementiels, nous adaptons notre offre, notre par cet nos ressources, pour répondre au mieux à vos exigences en quantité et en qualité.
+Particuliers ou professionnels, agence de voyage ou agence d’événementiels, nous adaptons notre offre, pour répondre au mieux à vos exigences en quantité et en qualité.
 
                   </h6>
                   <ul className="p-0 lowercase">
