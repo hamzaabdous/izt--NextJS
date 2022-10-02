@@ -83,7 +83,7 @@ export default function Header() {
           <span className="text-yellow-300 uppercase">INTERVILLE ZEROUAL </span>{" "}
           <span className="uppercase"> T</span>ransport SARL
         </h1>
-        <p className="position-relative text-white text-3xl font-normal lowercase p-4">
+        <p className="position-relative text-white text-3xl font-normal p-4">
           La société a vue le jour, dans le but de fructifier l’expérience de son fondateur Mr ZEROUAL ABDELKRIM, ayant cumulé plus que 20 ans d’expérience dans le domaine du transport touristique, ainsi pour fonder un organisme qui donnera un nouveau souffle au secteur, mais sur tout qui confirmera le principe de « la qualité » comme premier pilier.
           Avec plus que 30 véhicules différents, répondons à l’ensemble des besoins de nos clients, particuliers et professionnels, afin de rester leur premier choix de partenaires.
          <br></br>
